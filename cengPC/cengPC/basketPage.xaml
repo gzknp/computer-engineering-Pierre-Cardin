@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cengPC.basketPage">
+    <ContentPage.Content>
+
+        <AbsoluteLayout>
+            <Grid>
+                <ScrollView Orientation="Vertical" >
+                    <StackLayout x:Name="urunlerLayout" Orientation="Vertical" BackgroundColor="gray" Margin="10,0,10,0">
+
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

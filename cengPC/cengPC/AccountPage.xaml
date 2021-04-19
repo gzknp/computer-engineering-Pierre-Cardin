@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cengPC.AccountPage" BackgroundColor="White" Title="Hesabım">
+    <ContentPage.Content>
+        <StackLayout>
+            <ImageButton Source="siparislerim" Margin="12,10,0,0"/>
+            <ImageButton Source="gecmisSiparislerim" Margin="12,-3,0,0"/>
+            <ImageButton Source="iadelerim" Margin="12,10,0,0"/>
+            <ImageButton Source="uyelikBilgilerim" Margin="8,0,0,0"/>
+            <ImageButton Source="adresBilgilerim" Margin="10,0,0,0"/>
+            <ImageButton Source="epostaDegistirme" Margin="12,0,0,0"/>
+            <ImageButton Source="sifreDegistirme" Margin="12,0,0,0"/>
+            <ImageButton Source="indirimKodlarim" Margin="12,0,0,0"/>
+            <ImageButton Source="bildirimlerim" Margin="12,0,0,0"/>
+
+            <ImageButton Source="cikisYap" Margin="15,10,0,0"/>
+
+
+            <StackLayout Margin=" 0,100,0,0" 
+                         HeightRequest="50" 
+                         Orientation="Horizontal" 
+                         VerticalOptions="CenterAndExpand">
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="homepage.png" BackgroundColor="white"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="25,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="0"/>
+                    <Label Text="Ana Sayfa" 
+                           Margin="10,-10,-10,0" 
+                           Padding="-4">
+
+                    </Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="user.png" BackgroundColor="red"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="25,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="-2"/>
+                    <Label Text="Hesabım" 
+                           Margin="15,-10,-10,0" 
+                           Padding="-4">
+
+                    </Label>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="love.png" BackgroundColor="white"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="25,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="0" />
+                    <Label Text="Favorilerim" 
+                           Margin="10,-10,-10,0" 
+                           Padding="-4">
+
+                    </Label>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="tracking.png" BackgroundColor="white"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="25,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="-1" />
+                    <Label Text="Sipariş Takip" 
+                           Margin="5,-10,-10,0"
+                           Padding="-4">
+
+                    </Label>
+                </StackLayout>
+
+
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="more.png" BackgroundColor="white"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="15,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="8" />
+                    <Label Text="Daha Fazla" 
+                           Margin="0,-10,-10,0" 
+                           Padding="-4">
+
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

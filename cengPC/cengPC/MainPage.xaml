@@ -1,0 +1,974 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+            
+             xmlns:templates="clr-namespace:cengPc;assembly=cengPC" 
+             xmlns:templates1="clr-namespace:cengPC"
+             x:Class="cengPC.MainPage">
+    <!-- xmlns:local="clr-namespace:cengPC"-->
+ 
+
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+
+            
+
+            <Grid>
+
+                <!-- orta kısım - start-->
+                <xct:TabView
+                    Padding="0,50,0,0"
+                    TabStripPlacement="Top"
+                    TabStripBackgroundColor="White"
+                    IsSwipeEnabled="True"
+                    TabStripHeight="60"
+                    TabContentHeight="500"
+                    TabIndicatorColor="Brown"
+                    TabContentBackgroundColor="White"
+                    HorizontalOptions="StartAndExpand"
+                   >
+
+                    <!--keşfet - start -->
+                    <xct:TabViewItem
+                            Text="KEŞFET"
+                            TextColor="Black"
+                            TextColorSelected="Black"
+                            FontSize="12"
+                        >
+                        <Grid BackgroundColor="white">
+                            <ContentView>
+                                <ScrollView Orientation="Vertical"  Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" 
+                                    Grid.ColumnSpan="3" Margin="0,15,0,0" >
+                                    <StackLayout Orientation="Vertical" >
+                                        <SearchBar  Grid.Column="0" 
+                                            Grid.ColumnSpan="2"  Placeholder="Arama"
+                                            BackgroundColor="White">
+                                        </SearchBar>
+                                        <ScrollView HorizontalScrollBarVisibility="Never"  Orientation="Horizontal" 
+                                                    Margin="10,0,0,0" HeightRequest="80">
+
+                                            <StackLayout Orientation="Horizontal" >
+
+                                                <StackLayout Orientation="Vertical">
+                                                    <ImageButton Source="OnlineOzel" HeightRequest="73" 
+                                                                     BackgroundColor="White" CornerRadius="10" 
+                                                                     Margin="0,0,0,0">
+
+                                                    </ImageButton>
+                                                    
+                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Vertical">
+                                                    <ImageButton Source="YazaHazirlik" HeightRequest="73" 
+                                                                     BackgroundColor="White" CornerRadius="10" 
+                                                                     Margin="0,0,0,0">
+
+                                                    </ImageButton>
+                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Vertical">
+                                                    <ImageButton Source="SanaOzel" HeightRequest="73" 
+                                                                     BackgroundColor="White" CornerRadius="10" 
+                                                                     Margin="0,0,0,0">
+
+                                                    </ImageButton>
+                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Vertical">
+                                                    <ImageButton Source="OfisStili" HeightRequest="73" 
+                                                                     BackgroundColor="White" CornerRadius="10" 
+                                                                     Margin="0,0,0,0">
+
+                                                    </ImageButton>
+                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Vertical">
+                                                    <ImageButton Source="PCSports" HeightRequest="73" 
+                                                                     BackgroundColor="White" CornerRadius="10" 
+                                                                     Margin="0,0,0,0">
+
+                                                    </ImageButton>
+                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Vertical">
+                                                    <ImageButton Source="CokSatanlar" HeightRequest="73" 
+                                                                     BackgroundColor="White" CornerRadius="10" 
+                                                                     Margin="0,0,0,0">
+
+                                                    </ImageButton>
+                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Vertical">
+                                                    <ImageButton Source="BasicGomlekler" HeightRequest="73" 
+                                                                     BackgroundColor="White" CornerRadius="10" 
+                                                                     Margin="0,0,0,0">
+
+                                                    </ImageButton>
+                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Vertical">
+                                                    <ImageButton Source="StiliniziTamamlayin" HeightRequest="73" 
+                                                                     BackgroundColor="White" CornerRadius="10" 
+                                                                     Margin="0,0,0,0">
+
+                                                    </ImageButton>
+                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                </StackLayout>
+
+                                            </StackLayout>
+
+                                        </ScrollView>
+
+                                        <Label Text="Mobile App'e Özel Kargo Bedava" FontAttributes="Bold"
+                                               FontSize="Medium" HorizontalOptions="Center"
+                                               TextColor="Black" Scale="1.2" 
+                                               Margin="0,10,0,0">
+
+                                        </Label>
+                                        <Image Source="MainPageRamazan"  HeightRequest="420"
+                                            BackgroundColor="White" Margin="0,-5,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+
+                                            <Label Text="FIRSATI KAÇIRMA  &#10;  &#10;    Sadece 3 Gün &#10;"
+                                                   HorizontalOptions="Center" Margin="140,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                    BorderColor="Black" BorderWidth="1">
+
+                                        </Button>
+
+                                        <Image Source="MainPageBaharFestival" HeightRequest="420"
+                                                Margin="0,10,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+
+                                            <Label Text="BİNLERCE SEÇENEK  &#10;  &#10;    Bahar Festivali &#10;"
+                                                    HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                  BorderColor="Black" BorderWidth="1">
+
+                                        </Button>
+
+                                        <Image Source="ErkenYazFirsati" HeightRequest="420"
+                                                 Margin="0,10,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+
+                                            <Label Text="BÜYÜK FIRSAT  &#10;  &#10;    Yaza Hazırlık &#10;"
+                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                 BorderColor="Black" BorderWidth="1">
+
+                                        </Button>
+
+                                        <Image Source="MainPageCantalarda" HeightRequest="420"
+                                                   Margin="0,10,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+                                            <Label Text="YEPYENİ SEÇENEKLER  &#10;  &#10;    Vazgeçilmez Tutku &#10;"
+                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                 BorderColor="Black" BorderWidth="1">
+
+                                        </Button>
+
+                                        <Image Source="MainPageSpring" HeightRequest="420"
+                                                 Margin="0,10,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+
+                                            <Label Text="SPRING &amp; SUMMER  &#10;  &#10; Sezonun İlk Parçaları &#10;"
+                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                  BorderColor="Black" BorderWidth="1">
+
+                                        </Button>
+
+                                        <Image Source="MainPageKadinPijama" HeightRequest="420"
+                                                 Margin="0,10,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+
+                                            <Label Text="SİZE ÖZEL  &#10;  &#10;    Konforu Hissedin &#10;"
+                                                      HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                 BorderColor="Black" BorderWidth="1">
+
+                                        </Button>
+
+                                        <Image Source="MainPageExclusive" HeightRequest="420"
+                                                 Margin="0,10,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+
+                                            <Label Text="YÜZLERCE SEÇENEK  &#10;  &#10;    Sana Özel &#10;"
+                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                 BorderColor="Black" BorderWidth="1">
+
+                                        </Button>
+
+                                        <Image Source="MainPageDenim" HeightRequest="420"
+                                                  Margin="0,10,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+
+                                            <Label Text="PANTOLONLAR  &#10;  &#10;    Vücudu Saran Formlar &#10;"
+                                                      HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                 BorderColor="Black" BorderWidth="1">
+
+                                        </Button>
+
+                                        <Image Source="MainPageSweatshirt" HeightRequest="420"
+                                                Margin="0,10,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+
+                                            <Label Text="PC SPORTS  &#10;  &#10;    Konforu Hisset &#10;"
+                                                    HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                 BorderColor="Black" BorderWidth="1">
+
+                                        </Button>
+
+                                        <Image Source="MainPageKadin70" HeightRequest="420"
+                                                 Margin="0,10,0,10">
+
+                                        </Image>
+
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+
+                                            <Label Text="FEMİNEN TASARIMLAR  &#10;  &#10;    Kadın Giyimde Fırsatlar &#10;"
+                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
+                                                    BorderColor="Black" BorderWidth="1"
+                                                    Margin="0,0,0,50">
+
+                                        </Button>
+
+                                    </StackLayout>
+                                </ScrollView>
+                            </ContentView>
+                        </Grid>
+                    </xct:TabViewItem>
+                    <!--keşfet  - end -->
+
+                    <!--yeni sezon  - start -->
+                    <xct:TabViewItem
+                            Text="YENİ SEZON"
+                            TextColor="Black"
+                            TextColorSelected="Black"
+                            FontSize="12"
+                        >
+                        <Grid BackgroundColor="white">
+                            <Grid Margin="0,0,0,0" BackgroundColor="White">
+                                <Grid.RowDefinitions>
+
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition Width="3*" ></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+
+
+                                <ScrollView BackgroundColor="White" Orientation="Vertical"  Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" 
+                                Grid.ColumnSpan="3" Margin="0,-10,0,0" >
+
+                                    <StackLayout Orientation="Vertical" >
+
+
+                                        <Image Source="YeniSezon"  HeightRequest="420" Margin="0,-92,0,10" ></Image>
+                                        <StackLayout Orientation="Vertical" Margin="5,-130,0,0">
+                                            <Button Text=" ERKEK" BackgroundColor="White" HorizontalOptions="Start" FontAttributes="Bold"  ></Button>
+                                            <Button Text="T-Shirt" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="Ceket" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="   Gömlek" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Sweatshirt" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Takım Elbise - Smokin" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="Triko" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Pantolon" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Kaban Mont Trençkot" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     AKSESUAR" BackgroundColor="White" HorizontalOptions="Start" FontAttributes="Bold" ></Button>
+                                            <Button Text="     Ayakkabı" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="      İç Giyim" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Kemer" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Cüzdan &amp; Kartlık" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  Çanta" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Kol Düğmesi" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="   KADIN" BackgroundColor="White" HorizontalOptions="Start" FontAttributes="Bold" ></Button>
+                                            <Button Text="Triko" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Gömlek" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="   Elbise" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Pantolon" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Çanta &amp; Cüzdan" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="   Eşarp" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+
+                                        </StackLayout>
+
+
+
+
+                                    </StackLayout>
+
+                                </ScrollView>
+
+                                <StackLayout>
+
+                                </StackLayout>
+
+                            </Grid>
+                        </Grid>
+                    </xct:TabViewItem>
+                    <!--yeni sezon  - end -->
+
+                    <!--erkek  - start -->
+                    <xct:TabViewItem
+                            Text="ERKEK"
+                            TextColor="Black"
+                            TextColorSelected="Black"
+                            FontSize="12"
+                        >
+                        <Grid BackgroundColor="White">
+                            <Grid Margin="0,0,0,0" BackgroundColor="White">
+                                <Grid.RowDefinitions>
+
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition Width="3*" ></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+
+
+
+
+                                <ScrollView BackgroundColor="White" Orientation="Vertical"  Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" 
+                                Grid.ColumnSpan="3" Margin="0,-10,0,0" >
+
+                                    <StackLayout Orientation="Vertical" >
+
+
+                                        <Image Source="Erkek"  HeightRequest="420" Margin="0, -92,0,10" ></Image>
+                                        <StackLayout Orientation="Vertical" Margin="10,-130,0,0">
+                                            <Button Text=" KOLEKSİYON" Clicked="erkekKoleksiyon" BackgroundColor="White" HorizontalOptions="Start" FontAttributes="Bold"  ></Button>
+                                            <Button Text="T-Shirt" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="Ceket" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="   Gömlek" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="   Sweatshirt" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Pantolon" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Sweatshirt" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Takım Elbise - Smokin" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text=" Triko" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Bermuda &amp;Şort" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     PC Sports" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Kaban Mont Trençkot" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="      İç Giyim" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Yelek" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+
+
+                                            <Button Text="     AKSESUAR" BackgroundColor="White" HorizontalOptions="Start" FontAttributes="Bold" ></Button>
+                                            <Button Text="     Ayakkabı" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Cüzdan &amp; Kartlık" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  Çanta" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  Çorap" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  Kaşkol &amp; Bere &amp; Eldiven" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Kemer" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  Mendil" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  Kravat" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Kol Düğmesi" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  Papyon" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  Valiz" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+
+                                </ScrollView>
+
+                                <StackLayout>
+
+                                </StackLayout>
+
+                            </Grid>
+                        </Grid>
+                    </xct:TabViewItem>
+                    <!--erkek  - end -->
+
+                    <!--kadın  - start -->
+                    <xct:TabViewItem
+                            Text="KADIN"
+                            TextColor="Black"
+                            TextColorSelected="Black"
+                            FontSize="12"
+                        >
+                        <Grid BackgroundColor="white">
+                            <Grid Margin="0,0,0,0" BackgroundColor="White">
+                                <Grid.RowDefinitions>
+
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition Width="3*" ></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+
+
+
+
+                                <ScrollView BackgroundColor="White" Orientation="Vertical"  Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" 
+                                Grid.ColumnSpan="3" Margin="0,-10,0,0" >
+
+                                    <StackLayout Orientation="Vertical" >
+
+
+                                        <Image Source="kadin"  HeightRequest="420" Margin="0,-48,0,10"></Image>
+                                        <StackLayout Orientation="Vertical" Margin="10,-130,0,0">
+                                            <Button Text="   KADIN" BackgroundColor="White" HorizontalOptions="Start" FontAttributes="Bold" ></Button>
+                                            <Button Text="     Gömlek - Bluz" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  T-Shirt" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="Ceket" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Elbise" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="Etek" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Şort &amp; Bermuda" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="      Pantolon" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="Triko" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Kaban Mont Trençkot" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+
+
+                                            <Button Text=" AKSESUAR" BackgroundColor="White" HorizontalOptions="Start" FontAttributes="Bold"  ></Button>
+                                            <Button Text="     Cüzdan &amp; Kartlık" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="  Çanta" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="   Kemer" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Kaşkol &amp; Bere &amp; Eldiven" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="   Eşarp" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+
+
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+
+                                </ScrollView>
+
+                                <StackLayout>
+
+                                </StackLayout>
+
+                            </Grid>
+                        </Grid>
+                    </xct:TabViewItem>
+                    <!--kadın  - end -->
+
+                    <!--fırsat  - start -->
+                    <xct:TabViewItem
+                            Text="FIRSAT"
+                            TextColor="Black"
+                            TextColorSelected="Black"
+                            FontSize="12">
+                        <Grid BackgroundColor="white">
+                            <Grid Margin="0,0,0,0" BackgroundColor="White">
+                                <Grid.RowDefinitions>
+
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition Width="3*" ></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+
+
+
+
+                                <ScrollView BackgroundColor="White" Orientation="Vertical"  Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" 
+                                Grid.ColumnSpan="3" Margin="0,-10,0,0" >
+
+                                    <StackLayout Orientation="Vertical" >
+
+
+
+                                        <Image Source="firsat"  HeightRequest="420" Margin="0,-92,0,10" ></Image>
+                                        <StackLayout Orientation="Vertical" Margin="10,-130,0,0">
+
+
+                                            <Button Text=" ERKEK" BackgroundColor="White" HorizontalOptions="Start" FontAttributes="Bold"  ></Button>
+                                            <Button Text="T-Shirt" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Pantolon" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="   Gömlek" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Takım Elbise - Smokin" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Şort &amp; Bermuda" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Ceket &amp; Yelek" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    İç Giyim" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Kaban Mont" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="Triko" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Sweatshirt" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="    Ayakkabı" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+
+                                            <Button Text="   KADIN" BackgroundColor="White" HorizontalOptions="Start" FontAttributes="Bold" ></Button>
+                                            <Button Text="     Gömlek - Bluz" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="     Çanta &amp; Cüzdan" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+                                            <Button Text="Triko" BackgroundColor="White" HorizontalOptions="Start"  ></Button>
+
+                                        </StackLayout>
+
+
+
+                                    </StackLayout>
+
+                                </ScrollView>
+
+                                <StackLayout>
+
+                                </StackLayout>
+
+                            </Grid>
+                        </Grid>
+                    </xct:TabViewItem>
+                    <!--fırsat  - end -->
+
+                    <!--kampanyalar  - start -->
+                    <xct:TabViewItem
+                            Text="KAMPANYALAR"
+                            TextColor="Black"
+                            TextColorSelected="Black"
+                            FontSize="12"
+                            Margin="0,0,0,0"
+                        >
+                        <Grid BackgroundColor="white">
+                            <Grid Margin="0,0,0,0" BackgroundColor="White">
+                                <Grid.RowDefinitions>
+
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition Width="3*" ></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+
+
+
+
+                                <ScrollView BackgroundColor="White" Orientation="Vertical"  Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" 
+                                    Grid.ColumnSpan="3" Margin="0,-10,0,0" >
+
+                                    <StackLayout Orientation="Vertical" >
+                                        <!-- son sayfa 1. fotoğraf-->
+                                        <StackLayout Orientation="Horizontal" HeightRequest="420" Grid.Column="0" >
+
+                                            <Image Source="MainPageRamazan" WidthRequest="420" Aspect="Fill"
+                                                BackgroundColor="White" Margin="0,22,0,0" >
+
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" Padding="0">
+
+                                            <Label Text="Sadece 3 Gün Tüm Alışverişlerde Sepette %10 İndirim"
+                                                       HorizontalOptions="Center" Margin="0,0,0,0" Padding="1"
+                                                       FontAttributes="Bold" FontSize="16"
+                                                       TextColor="Black">
+                                            </Label>
+                                            <Label Text="Kampanya, online mağazamız ve mobil uygulamamıza özeldir. Sadece seçili ürünlerde geçerlidir. %10 indirim sepet aşamasında uygulanacaktır. Başka kampanya, indirim veya indirim kodlarıyla birleşemez. Pierre Cardin, kampanyalarda değişiklik yapma, kampanyayı kapatma hakkını saklı tutar."
+                                                       HorizontalOptions="Center" Margin="5,0,0,0" Padding="4"
+                                                       FontAttributes="None" FontSize="16"
+                                                       FontFamily="Roboto-Regular.ttf"
+                                                       TextColor="Black">
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="DarkRed"
+                                                        BorderColor="black" BorderWidth="1" HorizontalOptions="Center" TextColor="white">
+                                        </Button>
+
+                                        <!-- son sayfa 2. fotoğraf-->
+                                        <StackLayout Orientation="Horizontal" HeightRequest="420" Grid.Column="0" >
+
+                                            <Image Source="MainPageBaharFestival" WidthRequest="420" Aspect="Fill"
+                                                BackgroundColor="White" Margin="0,22,0,0" >
+
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" Padding="0">
+
+                                            <Label Text="Bahar Festivali %70'e Varan İndirim"
+                                                       HorizontalOptions="Center" Margin="0,0,0,0" Padding="1"
+                                                       FontAttributes="Bold" FontSize="16"
+                                                       TextColor="Black">
+                                            </Label>
+                                            <Label Text="Kampanya, online mağazamız ve mobil uygulamamıza özeldir. Sadece seçili ürünlerde geçerlidir. İndirim ürün fiyatlarına yansıtılmıştır. Başka kampanya, indirim veya indirim kodlarıyla birleşemez. Pierre Cardin, kampanyalarda değişiklik yapma, kampanyayı kapatma hakkını saklı tutar."
+                                                       HorizontalOptions="Center" Margin="5,0,0,0" Padding="4"
+                                                       FontAttributes="None" FontSize="16"
+                                                       FontFamily="Roboto-Regular.ttf"
+                                                       TextColor="Black">
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="DarkRed"
+                                                        BorderColor="black" BorderWidth="1" HorizontalOptions="Center" TextColor="white">
+                                        </Button>
+
+                                        <!-- son sayfa 3. fotoğraf-->
+                                        <StackLayout Orientation="Horizontal" HeightRequest="420" Grid.Column="0" >
+
+                                            <Image Source="ErkenYazFirsati" WidthRequest="420" Aspect="Fill"
+                                                BackgroundColor="White" Margin="0,22,0,0" >
+
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" Padding="0">
+
+                                            <Label Text="Erken Yaz Fırsatı Kısa Kollu Gömlek ve T-shirt'lerde Sepette %20 İndirim"
+                                                       HorizontalOptions="Center" Margin="10,0,0,0" Padding="1"
+                                                       FontAttributes="Bold" FontSize="16"
+                                                       TextColor="Black">
+                                            </Label>
+                                            <Label Text="Kampanya, online mağazamız ve mobil uygulamamıza özeldir. Sadece seçili ürünlerde geçerlidir. %20 indirim sepet aşamasında uygulanacaktır. Başka kampanya, indirim veya indirim kodlarıyla birleşemez. Pierre Cardin, kampanyalarda değişiklik yapma, kampanyayı kapatma hakkını saklı tutar."
+                                                       HorizontalOptions="Center" Margin="5,0,0,0" Padding="4"
+                                                       FontAttributes="None" FontSize="16"
+                                                       FontFamily="Roboto-Regular.ttf"
+                                                       TextColor="Black">
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="DarkRed"
+                                                        BorderColor="black" BorderWidth="1" HorizontalOptions="Center" TextColor="white">
+                                        </Button>
+
+                                        <!-- son sayfa 4. fotoğraf-->
+                                        <StackLayout Orientation="Horizontal" HeightRequest="420" Grid.Column="0" >
+
+                                            <Image Source="KampOfis" WidthRequest="420" Aspect="Fill"
+                                                BackgroundColor="White" Margin="0,22,0,0" >
+
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" Padding="0">
+
+                                            <Label Text="Klasiklerde Sepette Ekstra %10 İndirim"
+                                                       HorizontalOptions="Center" Margin="0,0,0,0" Padding="1"
+                                                       FontAttributes="Bold" FontSize="16"
+                                                       TextColor="Black">
+                                            </Label>
+                                            <Label Text="Kampanya, online mağazamız ve mobil uygulamamıza özeldir. Sadece seçili ürünlerde geçerlidir. %10 indirim sepet aşamasında uygulanacaktır. Başka kampanya, indirim veya indirim kodlarıyla birleşemez. Pierre Cardin, kampanyalarda değişiklik yapma, kampanyayı kapatma hakkını saklı tutar."
+                                                       HorizontalOptions="Center" Margin="5,0,0,0" Padding="4"
+                                                       FontAttributes="None" FontSize="16"
+                                                       FontFamily="Roboto-Regular.ttf"
+                                                       TextColor="Black">
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="DarkRed"
+                                                        BorderColor="black" BorderWidth="1" HorizontalOptions="Center" TextColor="white">
+                                        </Button>
+
+                                        <!-- son sayfa 5. fotoğraf-->
+                                        <StackLayout Orientation="Horizontal" HeightRequest="420" Grid.Column="0" >
+
+                                            <Image Source="MainPageCantalarda" WidthRequest="420" Aspect="Fill"
+                                                BackgroundColor="White" Margin="0,22,0,0" >
+
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" Padding="0">
+
+                                            <Label Text="Kadın Çantalarda Net %50 + Sepette %10 İndirim"
+                                                       HorizontalOptions="Center" Margin="0,0,0,0" Padding="1"
+                                                       FontAttributes="Bold" FontSize="16"
+                                                       TextColor="Black">
+                                            </Label>
+                                            <Label Text="Kampanya, online mağazamız ve mobil uygulamamıza özeldir. Sadece seçili ürünlerde geçerlidir. %10 indirim sepet aşamasında uygulanacaktır. Başka kampanya, indirim veya indirim kodlarıyla birleşemez. Pierre Cardin, kampanyalarda değişiklik yapma, kampanyayı kapatma hakkını saklı tutar."
+                                                       HorizontalOptions="Center" Margin="5,0,0,0" Padding="4"
+                                                       FontAttributes="None" FontSize="16"
+                                                       FontFamily="Roboto-Regular.ttf"
+                                                       TextColor="Black">
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="DarkRed"
+                                                        BorderColor="black" BorderWidth="1" HorizontalOptions="Center" TextColor="white">
+                                        </Button>
+
+                                        <!-- son sayfa 6. fotoğraf-->
+                                        <StackLayout Orientation="Horizontal" HeightRequest="420" Grid.Column="0" >
+
+                                            <Image Source="MainPageSpring" WidthRequest="420" Aspect="Fill"
+                                                BackgroundColor="White" Margin="0,22,0,0" >
+
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" Padding="0">
+
+                                            <Label Text="Sezonun İlk Parçalarında Net %30 İndirim"
+                                                       HorizontalOptions="Center" Margin="0,0,0,0" Padding="1"
+                                                       FontAttributes="Bold" FontSize="16"
+                                                       TextColor="Black">
+                                            </Label>
+                                            <Label Text="Kampanya, online mağazamız ve mobil uygulamamıza özeldir. Sadece seçili ürünlerde geçerlidir. İndirim ürün fiyatlarına yansıtılmıştır. Başka kampanya, indirim veya indirim kodlarıyla birleşemez. Pierre Cardin, kampanyalarda değişiklik yapma, kampanyayı kapatma hakkını saklı tutar."
+                                                       HorizontalOptions="Center" Margin="5,0,0,0" Padding="4"
+                                                       FontAttributes="None" FontSize="16"
+                                                       FontFamily="Roboto-Regular.ttf"
+                                                       TextColor="Black">
+                                            </Label>
+
+                                        </StackLayout>
+
+                                        <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="DarkRed"
+                                                        BorderColor="black" BorderWidth="1" HorizontalOptions="Center" TextColor="white">
+                                        </Button>
+
+
+
+                                    </StackLayout>
+
+                                </ScrollView>
+
+                                <StackLayout>
+
+                                </StackLayout>
+
+                            </Grid>
+                        </Grid>
+                    </xct:TabViewItem>
+                    <!--kampanyalar  - end -->
+
+                </xct:TabView>
+
+            </Grid>
+            <!-- orta kısım - end-->
+
+            <!-- bottom navbar - start -->
+            <StackLayout Margin=" 0,610,0,0" 
+                         HeightRequest="50" 
+                         Orientation="Horizontal" 
+                         VerticalOptions="CenterAndExpand">
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="homepage.png" BackgroundColor="red"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="25,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="0"/>
+                    <Label Text="Ana Sayfa" 
+                           Margin="10,-10,-10,0" 
+                           Padding="-4">
+                        
+                    </Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="user.png" BackgroundColor="white"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="25,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="-2" Clicked="ImageButton_Clicked_2"/>
+                    <Label Text="Hesabım" 
+                           Margin="15,-10,-10,0" 
+                           Padding="-4">
+
+                    </Label>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="love.png" BackgroundColor="white"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="25,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="0" Clicked="ImageButton_Clicked_5"/>
+                    <Label Text="Favorilerim" 
+                           Margin="10,-10,-10,0" 
+                           Padding="-4">
+
+                    </Label>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="tracking.png" BackgroundColor="white"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="25,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="-1" Clicked="ImageButton_Clicked_4"/>
+                    <Label Text="Sipariş Takip" 
+                           Margin="5,-10,-10,0"
+                           Padding="-4">
+
+                    </Label>
+                </StackLayout>
+
+
+
+                <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
+                    <ImageButton Source="more.png" BackgroundColor="white"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="15,5,0,5"
+                                 WidthRequest="30"
+                                 Padding="8" Clicked="ImageButton_Clicked_6"/>
+                    <Label Text="Daha Fazla" 
+                           Margin="0,-10,-10,0" 
+                           Padding="-4">
+                
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+            <!-- bottom navbar - end -->
+            
+            <!-- topbar - start -->
+            <StackLayout  HeightRequest="50" Orientation="Horizontal" VerticalOptions="Center" BackgroundColor="white">
+                <Image Source="logo" 
+                           WidthRequest="130"
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="Start"
+                           Margin="150,5,0,0" 
+                           BackgroundColor="White"/>
+
+                <ImageButton Source="searchicon.png" BackgroundColor="white"
+                                HorizontalOptions="End" 
+                                VerticalOptions="Center"
+                                Margin="60, 15, 0 ,13" 
+                                CornerRadius="100" 
+                                Padding="0" Clicked="ImageButton_Clicked"/>
+
+                <ImageButton  Source="basket" BackgroundColor="white"
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Start"
+                                 Margin="0,10,10,5"
+                                 Padding="0" Clicked="ImageButton_Clicked_1"/>
+
+            </StackLayout>
+            <!-- topbar - end -->
+
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
