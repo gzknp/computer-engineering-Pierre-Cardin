@@ -7,7 +7,6 @@
              xmlns:templates1="clr-namespace:cengPC"
              x:Class="cengPC.MainPage">
     <!-- xmlns:local="clr-namespace:cengPC"-->
- 
 
     <ContentPage.Content>
         <AbsoluteLayout BackgroundColor="White">
@@ -66,7 +65,7 @@
                                                                      Margin="0,0,0,0">
 
                                                     </ImageButton>
-                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                    <Label Text="Yaza Hazırlık" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
                                                 </StackLayout>
 
                                                 <StackLayout Orientation="Vertical">
@@ -75,7 +74,7 @@
                                                                      Margin="0,0,0,0">
 
                                                     </ImageButton>
-                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                    <Label Text="Sana Özel" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
                                                 </StackLayout>
 
                                                 <StackLayout Orientation="Vertical">
@@ -84,7 +83,7 @@
                                                                      Margin="0,0,0,0">
 
                                                     </ImageButton>
-                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                    <Label Text="Ofis Stili" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
                                                 </StackLayout>
 
                                                 <StackLayout Orientation="Vertical">
@@ -93,7 +92,7 @@
                                                                      Margin="0,0,0,0">
 
                                                     </ImageButton>
-                                                    <Label Text="Deneme" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
+                                                    <Label Text="PC Sport" Margin="0,-14,0,0" HorizontalOptions="Center"></Label>
                                                 </StackLayout>
 
                                                 <StackLayout Orientation="Vertical">
@@ -138,10 +137,10 @@
 
                                         </Image>
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
 
                                             <Label Text="FIRSATI KAÇIRMA  &#10;  &#10;    Sadece 3 Gün &#10;"
-                                                   HorizontalOptions="Center" Margin="140,0,0,0"
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
                                                    FontAttributes="Bold" FontSize="Medium"
                                                    TextColor="Black">
 
@@ -150,7 +149,8 @@
                                         </StackLayout>
 
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
-                                                    BorderColor="Black" BorderWidth="1">
+                                                    BorderColor="Black" BorderWidth="1"
+                                                Margin="10,0,10,0">
 
                                         </Button>
 
@@ -159,17 +159,21 @@
 
                                         </Image>
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="CenterAndExpand" >
 
                                             <Label Text="BİNLERCE SEÇENEK  &#10;  &#10;    Bahar Festivali &#10;"
-                                                    HorizontalOptions="Center" Margin="140,0,0,0">
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
+
 
                                             </Label>
 
                                         </StackLayout>
 
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
-                                                  BorderColor="Black" BorderWidth="1">
+                                                  BorderColor="Black" BorderWidth="1"
+                                                Margin="10,0,10,0">
 
                                         </Button>
 
@@ -178,17 +182,20 @@
 
                                         </Image>
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
 
-                                            <Label Text="BÜYÜK FIRSAT  &#10;  &#10;    Yaza Hazırlık &#10;"
-                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+                                            <Label Text="BÜYÜK FIRSAT  &#10;  &#10; Yaza Hazırlık &#10;"
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
 
                                             </Label>
 
                                         </StackLayout>
 
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
-                                                 BorderColor="Black" BorderWidth="1">
+                                                 BorderColor="Black" BorderWidth="1"
+                                                Margin="10,0,10,0">
 
                                         </Button>
 
@@ -197,16 +204,21 @@
 
                                         </Image>
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
-                                            <Label Text="YEPYENİ SEÇENEKLER  &#10;  &#10;    Vazgeçilmez Tutku &#10;"
-                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
+
+                                            <Label Text="YEPYENİ SEÇENEKLER  &#10;  &#10;   Vazgeçilmez Tutku &#10;"
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
 
                                             </Label>
 
                                         </StackLayout>
 
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
-                                                 BorderColor="Black" BorderWidth="1">
+                                                 BorderColor="Black" BorderWidth="1"
+                                                Margin="10,0,10,0">
 
                                         </Button>
 
@@ -214,18 +226,20 @@
                                                  Margin="0,10,0,10">
 
                                         </Image>
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
-
-                                            <Label Text="SPRING &amp; SUMMER  &#10;  &#10; Sezonun İlk Parçaları &#10;"
-                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+                                            <Label Text=" SPRING &amp; SUMMER  &#10;  &#10; Sezonun İlk Parçaları &#10;"
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
 
                                             </Label>
 
                                         </StackLayout>
 
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
-                                                  BorderColor="Black" BorderWidth="1">
+                                                  BorderColor="Black" BorderWidth="1"
+                                                Margin="10,0,10,0">
 
                                         </Button>
 
@@ -234,17 +248,19 @@
 
                                         </Image>
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
 
-                                            <Label Text="SİZE ÖZEL  &#10;  &#10;    Konforu Hissedin &#10;"
-                                                      HorizontalOptions="Center" Margin="140,0,0,0">
+                                            <Label Text="      SİZE ÖZEL &#10;  &#10;Konforu Hissedin &#10;"
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
 
                                             </Label>
 
                                         </StackLayout>
-
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
-                                                 BorderColor="Black" BorderWidth="1">
+                                                 BorderColor="Black" BorderWidth="1"
+                                                Margin="10,0,10,0">
 
                                         </Button>
 
@@ -253,17 +269,20 @@
 
                                         </Image>
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
 
-                                            <Label Text="YÜZLERCE SEÇENEK  &#10;  &#10;    Sana Özel &#10;"
-                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+                                            <Label Text="YÜZLERCE SEÇENEK &#10;  &#10;        Sana Özel &#10;"
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
 
                                             </Label>
 
                                         </StackLayout>
 
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
-                                                 BorderColor="Black" BorderWidth="1">
+                                                 BorderColor="Black" BorderWidth="1"
+                                                Margin="10,0,10,0">
 
                                         </Button>
 
@@ -272,17 +291,21 @@
 
                                         </Image>
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
 
-                                            <Label Text="PANTOLONLAR  &#10;  &#10;    Vücudu Saran Formlar &#10;"
-                                                      HorizontalOptions="Center" Margin="140,0,0,0">
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
+
+                                            <Label Text="       PANTOLONLAR &#10;  &#10;  Vücudu Saran Formlar &#10;"
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
 
                                             </Label>
 
                                         </StackLayout>
 
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
-                                                 BorderColor="Black" BorderWidth="1">
+                                                 BorderColor="Black" BorderWidth="1"
+                                                Margin="10,0,10,0">
 
                                         </Button>
 
@@ -291,17 +314,20 @@
 
                                         </Image>
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
 
-                                            <Label Text="PC SPORTS  &#10;  &#10;    Konforu Hisset &#10;"
-                                                    HorizontalOptions="Center" Margin="140,0,0,0">
+                                            <Label Text="   PC SPORTS &#10;  &#10;Konforu Hisset &#10;"
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
 
                                             </Label>
 
                                         </StackLayout>
 
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
-                                                 BorderColor="Black" BorderWidth="1">
+                                                 BorderColor="Black" BorderWidth="1"
+                                                Margin="10,0,10,0">
 
                                         </Button>
 
@@ -310,10 +336,13 @@
 
                                         </Image>
 
-                                        <StackLayout Orientation="Horizontal" Padding="10">
 
-                                            <Label Text="FEMİNEN TASARIMLAR  &#10;  &#10;    Kadın Giyimde Fırsatlar &#10;"
-                                                     HorizontalOptions="Center" Margin="140,0,0,0">
+                                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
+
+                                            <Label Text="FEMİNEN TASARIMLAR &#10;  &#10; Kadın Giyimde Fırsatlar &#10;"
+                                                   HorizontalOptions="Center" Margin="10,0,0,0"
+                                                   FontAttributes="Bold" FontSize="Medium"
+                                                   TextColor="Black">
 
                                             </Label>
 
@@ -321,7 +350,7 @@
 
                                         <Button Text=" ALIŞVERİŞE BAŞLA" BackgroundColor="White"
                                                     BorderColor="Black" BorderWidth="1"
-                                                    Margin="0,0,0,50">
+                                                   Margin="10,0,10,50">
 
                                         </Button>
 
@@ -970,5 +999,4 @@
         </AbsoluteLayout>
 
     </ContentPage.Content>
-
 </ContentPage>

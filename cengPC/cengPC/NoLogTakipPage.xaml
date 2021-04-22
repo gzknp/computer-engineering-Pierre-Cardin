@@ -11,18 +11,14 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout  BackgroundColor="White" Orientation="Vertical" VerticalOptions="Center" Margin="40,0,40,100">
-            
-                <Label Text="Sipariş Takip  " FontSize="Large" FontAttributes="Bold"
+            <Label Text="Sipariş Takip  " FontSize="Large" FontAttributes="Bold"
                    HorizontalOptions="Start" />
             <Label Text="Sipariş takibi için e-posta ve sipariş numaranızı giriniz."
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" >
-                
-            </Label>
-
-            <Entry Placeholder="* Sipariş Numaranız"></Entry>
-            <Entry Placeholder="* E-posta"></Entry>
-            <Button Text="GÖRÜNTÜLE" TextColor="White" BackgroundColor="Brown"></Button>
-   </StackLayout>
+                HorizontalOptions="Center"/>
+            <Entry Placeholder="* Sipariş Numaranız"/>
+            <Entry Placeholder="* E-posta"/>
+            <Button Text="GÖRÜNTÜLE" TextColor="White" BackgroundColor="Brown"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

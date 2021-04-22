@@ -46,6 +46,13 @@ namespace cengPC
                 });
                 AdEntry.Text = SoyadEntry.Text = EmailEntry.Text = TelefonEntry.Text = SifreEntry.Text = string.Empty;
             }
+            else
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    var result = await this.DisplayAlert("Hata", "Lütfen tüm bilgileri giriniz.", "tamam", "geri");
+                });
+            }
 
         }
 

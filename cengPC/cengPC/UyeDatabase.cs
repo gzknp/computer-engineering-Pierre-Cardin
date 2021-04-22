@@ -7,7 +7,8 @@ using SQLite;
 namespace cengPC
 {
     public class UyeDatabase
-    {/*
+    {
+        /*
         readonly SQLiteAsyncConnection _uyedatabase;
         public UyeDatabase(string dbPath)
         {

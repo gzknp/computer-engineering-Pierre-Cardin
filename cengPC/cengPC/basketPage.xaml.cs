@@ -17,8 +17,10 @@ namespace cengPC
         public ArrayList urunlerDizisi = new ArrayList();
 
         public basketPage()
-        {                InitializeComponent();
+        {                
+            InitializeComponent();
 
+            #region
             /* 
              string[] straImageLocations = System.IO.Directory.GetFiles("DirectoryLocation", "*.png", SearchOption.TopDirectoryOnly);
             Image[] Deck = new Image[straImageLocations.Length];
@@ -48,19 +50,25 @@ namespace cengPC
             {
                 InitializeComponent();
             }*/
+            #endregion //ys
         }
 
-       
+        async void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new erkekKoleksiyonPage());
+        }
+
+
 
 
         /*   public void LoadDynamicFields()
-  {
+                  {
 
-  int count = 2;
-      for(int i = 0; i < count; i++)
-      {
+                  int count = 2;
+                      for(int i = 0; i < count; i++)
+                      {
 
-      }
-  }*/
+                      }
+                  }*/
     }
 }
