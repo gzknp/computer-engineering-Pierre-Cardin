@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cengPC.TakipPage">
+    <NavigationPage.TitleView>
+        <Label Margin="0,15,25,50" HorizontalTextAlignment="Center" 
+               TextColor="Black" 
+               Text="Siparişlerim" 
+               FontAttributes="Bold"
+              FontSize="18" ></Label>
+
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Sipariş bulunamadı"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

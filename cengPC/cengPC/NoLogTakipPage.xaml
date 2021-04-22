@@ -19,9 +19,10 @@
                 HorizontalOptions="Center" >
                 
             </Label>
+
             <Entry Placeholder="* Sipariş Numaranız"></Entry>
             <Entry Placeholder="* E-posta"></Entry>
             <Button Text="GÖRÜNTÜLE" TextColor="White" BackgroundColor="Brown"></Button>
-        </StackLayout>
+   </StackLayout>
     </ContentPage.Content>
 </ContentPage>

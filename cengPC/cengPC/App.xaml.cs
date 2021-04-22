@@ -21,7 +21,7 @@ namespace cengPC
 {
     public partial class App : Application
     {
-        static UyeDatabase database;
+        /* static UyeDatabase database;
         public static UyeDatabase UyeDatabase
         {
             get
@@ -32,7 +32,8 @@ namespace cengPC
                 }
                 return database;
             }
-        }
+        }*/
+        static UyeDatabase database;
         public App()
         {
             InitializeComponent();
@@ -40,6 +41,18 @@ namespace cengPC
             MainPage = new NavigationPage(new MainPage());
         }
 
+        public static UyeDatabase Database
+        {
+            get
+            {
+                if(database == null)
+                {
+                    //database = new UyeDatabase(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("uyelerim.db3"));
+                    database = new UyeDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "uyelerim.db3"));
+                }
+                return database;
+            }
+        }
         protected override void OnStart()
         {
         }

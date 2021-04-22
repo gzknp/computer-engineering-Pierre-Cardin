@@ -22,15 +22,15 @@ namespace cengPC
             base.OnAppearing();
         }
 
-         void OnButtonClicked(object sender, EventArgs e)
+        async void OnButtonClicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(AdEntry.Text) && !string.IsNullOrWhiteSpace(SoyadEntry.Text) && !string.IsNullOrWhiteSpace(EmailEntry.Text) && !string.IsNullOrWhiteSpace(TelefonEntry.Text) && !string.IsNullOrWhiteSpace(SifreEntry.Text))
+           if (!string.IsNullOrWhiteSpace(AdEntry.Text) && !string.IsNullOrWhiteSpace(SoyadEntry.Text) && !string.IsNullOrWhiteSpace(EmailEntry.Text) && !string.IsNullOrWhiteSpace(TelefonEntry.Text) && !string.IsNullOrWhiteSpace(SifreEntry.Text))
             {
                 var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UyeDatabse.db");
                 var db = new SQLiteConnection(dbpath);
-                db.CreateTable<Uyeler>();
+                db.CreateTable<Uye>();
 
-                var item = new Uyeler()
+                var item = new Uye()
                 {
                     Ad = AdEntry.Text,
                     Soyad = SoyadEntry.Text,
@@ -41,11 +41,12 @@ namespace cengPC
                 db.Insert(item);
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    var result = await this.DisplayAlert("Tebrikler", "Başarıyla kayıt oldunuz", "tamam", "ger,");
+                    var result = await this.DisplayAlert("Tebrikler", "Başarıyla kayıt oldunuz", "tamam", "geri");
                     await Navigation.PopAsync();
                 });
                 AdEntry.Text = SoyadEntry.Text = EmailEntry.Text = TelefonEntry.Text = SifreEntry.Text = string.Empty;
             }
+
         }
 
         async void Button_Clicked(object sender, EventArgs e)

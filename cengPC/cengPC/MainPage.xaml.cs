@@ -51,13 +51,28 @@ namespace cengPC
 
         private void ImageButton_Clicked_4(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NoLogTakipPage());
-            
+            if (MainPage.girildiMi)
+            {
+                Navigation.PushAsync(new TakipPage());
+
+            }
+            else
+            {
+                Navigation.PushAsync(new NoLogTakipPage());
+            }
         }
         
         private void ImageButton_Clicked_5(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LogInPage());
+            if (MainPage.girildiMi)
+            {
+                Navigation.PushAsync(new FavPage());
+
+            }
+            else
+            {
+                Navigation.PushAsync(new LogInPage());
+            }
 
         }
 
@@ -69,6 +84,11 @@ namespace cengPC
 
         //erkek sayfasi koleksiyon butonu clicked işlemi
         private void erkekKoleksiyon(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new erkekKoleksiyonPage());
+        }
+
+        private void ImageButton_Clicked_7(object sender, EventArgs e)
         {
             Navigation.PushAsync(new erkekKoleksiyonPage());
         }

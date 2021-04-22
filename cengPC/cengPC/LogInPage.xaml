@@ -22,7 +22,7 @@
                             TextColor="White"></Button>
                 </Frame>
                     <Entry x:Name="EntryEmail" Placeholder="E-posta" Margin="10,10,10,0"></Entry>
-                    <Entry x:Name="EntrySifre" Placeholder="Şifre" Margin="10,10,10,0"></Entry>
+                    <Entry IsPassword="True" x:Name="EntrySifre" Placeholder="Şifre" Margin="10,10,10,0"></Entry>
                     <Button BackgroundColor="Brown" Text="GİRİŞ YAP" TextColor="White"
                             Margin="10,30,10,0" Clicked="Button_Clicked_1"></Button>
                     <Button Margin="10,10,10,0" Text="Şifrenizi mi unuttunuz?" BackgroundColor="White"></Button>

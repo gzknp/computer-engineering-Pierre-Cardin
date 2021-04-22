@@ -17,18 +17,18 @@ namespace cengPC
         public ArrayList urunlerDizisi = new ArrayList();
 
         public basketPage()
-        {
+        {                InitializeComponent();
+
             /* 
              string[] straImageLocations = System.IO.Directory.GetFiles("DirectoryLocation", "*.png", SearchOption.TopDirectoryOnly);
             Image[] Deck = new Image[straImageLocations.Length];
             for (int i = 0; i < straImageLocations.Length; i++)
             {
                 Deck[i] = Image.FromFile(straImageLocations[i]);
-            }*/
+            }
             urunlerDizisi.Add("");
             if (urunlerDizisi.Count != 0)
             {
-                InitializeComponent();
                 String fotografIsmi = "";
 
                 for (int i = 1; i < 6; i++)
@@ -47,7 +47,7 @@ namespace cengPC
             else
             {
                 InitializeComponent();
-            }
+            }*/
         }
 
        

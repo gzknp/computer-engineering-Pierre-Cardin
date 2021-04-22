@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cengPC.ProfilPage" BackgroundColor="White">
+    <NavigationPage.TitleView>
+        <Label Margin="0,15,65,50" HorizontalTextAlignment="Center" 
+               TextColor="Black" 
+               Text="Profilim" 
+               FontAttributes="Bold"
+              FontSize="18" ></Label>
+
+    </NavigationPage.TitleView>
+  <ContentPage.Content>
+      <!--    <StackLayout Margin="20,35,20,20">
+
+            <Entry x:Name="AdEntry"
+               Placeholder="Ad"/>
+            <Entry x:Name="SoyadEntry"
+               Placeholder="Soyad"/>
+            <Entry x:Name="EmailEntry"
+               Placeholder="Email"/>
+            <Entry x:Name="TelefonEntry"
+               Placeholder="Telefon"/>
+            <Entry IsPassword="True" x:Name="SifreEntry"
+               Placeholder="Şifre"/>
+
+            <CheckBox></CheckBox>
+            <Label Margin="0,-31,0,0" HorizontalTextAlignment="Center" Text="Aydınlı Hazır Giyim San. Ve Tic A.Ş. tarafından &#10;  ürün, hizmet ve kampanyalarla ilgili reklam, pazarlama ve bilgi amaçlı her türlü ticari elektronik ileti gönderilmesine ve diğer iletişim araçları kullanılarak tarafımla iletişime geçilmesine izin veriyorum. &#10;"></Label>
+            <Button Text="GÖNDER" BackgroundColor="Brown" TextColor="White" ></Button>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" Margin="10,10,10,10" Padding="0" BackgroundColor="Gray">
+            <Label BackgroundColor="White" HeightRequest="100"></Label>
+            <TableView BackgroundColor="White" Margin="1,-5,1,1" Intent="Settings">
+                <TableSection>
+                    <EntryCell x:Name="AdEntry"  Placeholder="Ad" />
+                    <EntryCell x:Name="SoyadEntry" Placeholder="Soyad" />
+                    <EntryCell x:Name="EmailEntry"  Placeholder="Email adresiniz" />
+                    <EntryCell x:Name="TelefonEntry" Placeholder="Cep Telefonu 0 (555) 555 55 55 " />
+                    <EntryCell x:Name="SifreEntry" Placeholder="Şifre"  />
+
+
+                </TableSection>
+
+            </TableView>
+
+            <StackLayout Orientation="Vertical" Padding="1" BackgroundColor="White">
+                <CheckBox IsChecked="False" Color="Brown" Margin="-5,10,10,70" >
+
+                </CheckBox>
+                <Button Text="ÜYE OL" Clicked="Button_Clicked"></Button>
+                <Label HorizontalOptions="Center" Margin="10,-50,0,0" Text="selam"></Label>
+            </StackLayout>
+        </StackLayout>
+      
+        <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Entry Placeholder="Ad" Text="{Binding Ad}" Grid.Row="0" Grid.Column="1"/>
+            
+            </Grid>
+            <Button Text="GÖNDER" />
+        </StackLayout>-->
+        <StackLayout>
+            <ListView x:Name="UyeListView" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <TextCell Text="{Binding Ad}"/>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

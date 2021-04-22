@@ -5,9 +5,9 @@ using SQLite;
 
 namespace cengPC
 {
-    public class Uyeler
+    public class Uye
     {
-        public Guid UyeId { get; set; }
+        public int id { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string Email { get; set; }

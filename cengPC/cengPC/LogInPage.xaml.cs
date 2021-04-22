@@ -32,7 +32,7 @@ namespace cengPC
             var instance = new MainPage();
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UyeDatabse.db");
             var db = new SQLiteConnection(dbpath);
-            var myquery = db.Table<Uyeler>().Where(u => u.Email.Equals(EntryEmail.Text) && u.Sifre.Equals(EntrySifre.Text)).FirstOrDefault();
+            var myquery = db.Table<Uye>().Where(u => u.Email.Equals(EntryEmail.Text) && u.Sifre.Equals(EntrySifre.Text)).FirstOrDefault();
             if (myquery!=null)
             {
                 MainPage.girildiMi = true;
@@ -43,7 +43,6 @@ namespace cengPC
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     var result = await this.DisplayAlert("Hata", "Yanlış mail ya da şifre", "tamam", "geri");
-                    await Navigation.PopAsync();
                 });
             }
         }

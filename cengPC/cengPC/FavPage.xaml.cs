@@ -10,23 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace cengPC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AccountPage : ContentPage
+    public partial class FavPage : ContentPage
     {
-        public AccountPage()
+        public FavPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasBackButton(this, false);
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ProfilPage());
-        }
-
-        private void ImageButton_Clicked_1(object sender, EventArgs e)
-        {
-            MainPage.girildiMi = false;
             Navigation.PopAsync();
-
         }
     }
 }
