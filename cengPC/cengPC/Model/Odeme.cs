@@ -9,6 +9,5 @@ namespace cengPC.Model
         public int KartNo { get; set; }
         public string Adres { get; set; }
         public int Ccv { get; set; }
-
     }
 }

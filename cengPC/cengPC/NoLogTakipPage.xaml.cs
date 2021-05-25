@@ -17,8 +17,6 @@ namespace cengPC
             InitializeComponent();
             Title = "Üyeliksiz Sipariş Takibi";
             BackgroundColor = Color.White;
-            
-           
         }
     }
 }

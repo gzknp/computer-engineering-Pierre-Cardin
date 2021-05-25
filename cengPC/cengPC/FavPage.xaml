@@ -3,24 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cengPC.FavPage" BackgroundColor="White">
     <NavigationPage.TitleView>
-        <Label Margin="0,15,25,50" HorizontalTextAlignment="Center" 
+        <Label Margin="0,15,25,50"
+               HorizontalTextAlignment="Center" 
                TextColor="Black" 
                Text="Favorilerim" 
                FontAttributes="Bold"
-              FontSize="18" ></Label>
-
+               FontSize="18" ></Label>
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Favorileriniz Boş" FontSize="20" FontAttributes="Bold"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Favorileriniz Boş" FontSize="20" 
+                   FontAttributes="Bold"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
             <Label Text="Favorileriniz şu an için boş."
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand"></Label>
             <Button Text="ANASAYFAYA DÖN" TextColor="White" BackgroundColor="Brown"
                     Clicked="Button_Clicked"></Button>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

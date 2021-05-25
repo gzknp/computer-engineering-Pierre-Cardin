@@ -13,25 +13,34 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
-            <Label Text="Pierre Cardin" FontSize="40" TextColor="Brown" 
-                   HorizontalOptions="Center" VerticalOptions="Start"/>
-            <Label x:Name="LabelName" FontSize="Subtitle" Margin="20,0" TextColor="White"
-                   HorizontalOptions="Center" VerticalOptions="End"/>
+            <Label Text="Pierre Cardin" 
+                   FontSize="40" 
+                   TextColor="Brown" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Start"/>
+            <Label x:Name="LabelName" 
+                   FontSize="Subtitle" 
+                   Margin="20,0" 
+                   TextColor="White"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="End"/>
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Alışverişiniz için Teşekkürler" FontSize="23" FontAttributes="Bold"/>
-
-                    <Label Text="Takip için sipariş numaranızı kaydedin: " FontAttributes="Italic" FontSize="21"/>
-                    <Label x:Name="LabelOrderID" TextColor="Black"
+                    <Label Text="Alışverişiniz için Teşekkürler" 
+                           FontSize="23" 
+                           FontAttributes="Bold"/>
+                    <Label Text="Takip için sipariş numaranızı kaydedin: " 
+                           FontAttributes="Italic" 
+                           FontSize="21"/>
+                    <Label x:Name="LabelOrderID" 
+                           TextColor="Black"
                            FontSize="Subtitle"/>
                     <Button Text="Tüm Siparişleri Görüntüle"
                             WidthRequest="200"
                             BackgroundColor="Brown"
                             HorizontalOptions="CenterAndExpand"
-                            CornerRadius="2" Clicked="Button_Clicked"/>
-
+                            CornerRadius="2" 
+                            Clicked="Button_Clicked"/>
                 </StackLayout>
-                
         </Grid>
     </ContentPage.Content>
 </ContentPage>

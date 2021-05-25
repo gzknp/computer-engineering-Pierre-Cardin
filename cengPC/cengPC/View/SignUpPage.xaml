@@ -7,39 +7,39 @@
         <vm:RegisterViewModel/>
     </ContentPage.BindingContext>
     <NavigationPage.TitleView >
-
-        <Label BackgroundColor="White" TextColor="Black" Text="YENİ ÜYELİK" 
-              FontSize="20" ></Label>
-
+        <Label BackgroundColor="White" 
+               TextColor="Black" Text="YENİ ÜYELİK" 
+               FontSize="20" ></Label>
     </NavigationPage.TitleView>
-
     <ContentPage.Content>
         <StackLayout Margin="20,35,20,20">
-                <Button BackgroundColor="White" IsEnabled="False" Text=" Yeni Üyelerimize Özel 250 TL'de 40 TL indirim  &#10; Kupon Kodu YENIUYELIK"
+                <Button BackgroundColor="White" IsEnabled="False" 
+                        Text=" Yeni Üyelerimize Özel 250 TL'de 40 TL indirim  &#10; Kupon Kodu YENIUYELIK"
                         BorderColor="Gray" BorderWidth="1">
-
                 </Button>
             <Entry Text="{Binding Name}"
-               Placeholder="Ad"/>
+                   Placeholder="Ad"/>
             <Entry Text="{Binding LastName}"
-               Placeholder="Soyad"/>
+                   Placeholder="Soyad"/>
             <Entry Text="{Binding Email}"
-               Placeholder="Email"/>
+                   Placeholder="Email"/>
             <Entry Text="{Binding TelNo}"
-               Placeholder="Cep Telefonu"/>
+                   Placeholder="Cep Telefonu"/>
             <Entry IsPassword="True" Text="{Binding Password}"  
-               Placeholder="Şifre"/>
-
+                   Placeholder="Şifre"/>
             <CheckBox></CheckBox>
-            <Label Margin="30,-31,0,0" HorizontalTextAlignment="Center" Text="Aydınlı Hazır Giyim San. Ve Tic A.Ş. tarafından &#10;  ürün, hizmet ve kampanyalarla ilgili reklam, pazarlama ve bilgi amaçlı her türlü ticari elektronik ileti gönderilmesine ve diğer iletişim araçları kullanılarak tarafımla iletişime geçilmesine izin veriyorum.">
+            <Label Margin="30,-31,0,0" HorizontalTextAlignment="Center" 
+                   Text="Aydınlı Hazır Giyim San. Ve Tic A.Ş. tarafından &#10;  ürün, hizmet ve kampanyalarla ilgili reklam, pazarlama ve bilgi amaçlı her türlü ticari elektronik ileti gönderilmesine ve diğer iletişim araçları kullanılarak tarafımla iletişime geçilmesine izin veriyorum.">
             </Label>
             <CheckBox IsEnabled="True"></CheckBox>
             <Label Margin="30,-31,0,0" HorizontalTextAlignment="Center" Text="Aydınlı Hazır Giyim San. Ve Tic. A.Ş. kişisel veri &#10;Aydınlatma Metni'ni okudum, bu kapsamda kişisel verilerimin işlenmesine rıza gösteriyorum ve Üyelik Sözleşmesi'ni kabul ediyorum.">
-                
             </Label>
-            <Button Text="ÜYE OL" BackgroundColor="Brown" TextColor="White"  Command="{Binding RegisterCommand}"></Button>
-            <Button Margin="0,10,0,0" Text="GİRİŞ YAP" BackgroundColor="White" TextColor="Brown" BorderColor="Brown" BorderWidth="1" Clicked="Button_Clicked"></Button>
+            <Button Text="ÜYE OL" BackgroundColor="Brown" 
+                    TextColor="White"  Command="{Binding RegisterCommand}"></Button>
+            <Button Margin="0,10,0,0" Text="GİRİŞ YAP" 
+                    BackgroundColor="White" TextColor="Brown" 
+                    BorderColor="Brown" BorderWidth="1" 
+                    Clicked="Button_Clicked"></Button>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

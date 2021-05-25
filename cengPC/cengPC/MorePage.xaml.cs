@@ -17,10 +17,7 @@ namespace cengPC
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-
-
         }
-
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PopAsync();

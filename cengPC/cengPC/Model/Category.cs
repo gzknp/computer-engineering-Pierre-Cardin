@@ -10,6 +10,5 @@ namespace cengPC.Model
         public string CategoryName { get; set; }
         public string CategoryPoster { get; set; }
         public string ImageUrl { get; set; }
-
     }
 }

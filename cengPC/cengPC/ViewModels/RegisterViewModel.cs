@@ -21,6 +21,7 @@ namespace cengPC.ViewModels
                 return this._Email;
             }
         }
+
         private string _Password;
         public string Password
         {
@@ -35,6 +36,7 @@ namespace cengPC.ViewModels
                 return this._Password;
             }
         }
+
         private string _Name;
         public string Name
         {
@@ -61,6 +63,7 @@ namespace cengPC.ViewModels
                 return this._LastName;
             }
         }
+
         private string _TelNo;
         public string TelNo
         {
@@ -74,6 +77,7 @@ namespace cengPC.ViewModels
                 return this._TelNo;
             }
         }
+
         private bool _IsBusy;
         public bool IsBusy
         {
@@ -87,6 +91,7 @@ namespace cengPC.ViewModels
                 return this._IsBusy;
             }
         }
+
         private bool _Result;
         public bool Result
         {
@@ -116,14 +121,14 @@ namespace cengPC.ViewModels
                 var userService = new UserService();
                 Result = await userService.RegisterUser(Email, Password, TelNo, Name, LastName);
                 if (Result)
-                    await Application.Current.MainPage.DisplayAlert("Tebrikler", "Kayıt Başarılı", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Tebrikler", "Kayıt Başarılı", "TAMAM");
                 else
                     await Application.Current.MainPage.DisplayAlert("Hata",
-                        "Aynı mail bir kullanıcı tarafından kullanılıyor", "OK");
+                        "Aynı mail bir kullanıcı tarafından kullanılıyor", "TAMAM");
             }
             catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
+                await Application.Current.MainPage.DisplayAlert("Hata", ex.Message, "TAMAM");
             }
             finally
             {

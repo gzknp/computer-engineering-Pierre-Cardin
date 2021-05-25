@@ -16,20 +16,9 @@ namespace cengPC
         {
             InitializeComponent();
         }
-
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-
         }
-
-
-
-        /* async void Button_Clicked(object sender, EventArgs e)
-         {
-             var uyeItem = (Uye)BindingContext;
-             await App.Database.SaveUyeAsync(uyeItem);
-             await Navigation.PopAsync();
-         }*/
     }
 }

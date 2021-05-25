@@ -96,11 +96,11 @@ namespace cengPC.ViewModels
                 }
                 cn.Commit();
                 cn.Close();
-                Application.Current.MainPage.DisplayAlert("Cart", "Selected Item Added to Cart", "OK");
+                Application.Current.MainPage.DisplayAlert("Bilgi", "Seçilen ürün sepete eklendi", "TAMAM");
             }
             catch(Exception ex)
             {
-                Application.Current.MainPage.DisplayAlert("Hata", ex.Message, "OK");
+                Application.Current.MainPage.DisplayAlert("Hata", ex.Message, "TAMAM");
             }
             finally
             {

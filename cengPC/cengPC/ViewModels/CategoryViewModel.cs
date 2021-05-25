@@ -45,10 +45,7 @@ namespace cengPC.ViewModels
             GetProductItems(category.CategoryID);       
 
         }
-        
-
-
-    private async void GetProductItems(int categoryID)
+        private async void GetProductItems(int categoryID)
         {
             var data = await new ProductItemService().GetProductItemsByCategoryAsync(categoryID);
             ProductItemsByCategory.Clear();

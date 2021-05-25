@@ -16,13 +16,11 @@ namespace cengPC.View
     {
         public Filtre()
         {
-            InitializeComponent();        
-
+            InitializeComponent();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-
         }
         public void OnPickerSelectedIndexChanged (object sender, EventArgs e)
         {

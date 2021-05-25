@@ -24,7 +24,6 @@ namespace cengPC.Helper
                     CategoryName="Gomlek",
                     CategoryPoster="MainGomlek",
                     ImageUrl="Erkek.png"
-
                 },              
                 new Category()
                 {
@@ -32,7 +31,6 @@ namespace cengPC.Helper
                     CategoryName="Ceket",
                     CategoryPoster="MainCeket",
                     ImageUrl="Ceket.png"
-
                 },                
                 new Category()
                 {
@@ -40,9 +38,7 @@ namespace cengPC.Helper
                     CategoryName="Tshirt",
                     CategoryPoster="MainTshirt",
                     ImageUrl="Tshirt.png"
-
-                }              
-                
+                }       
             };
         }
         public async Task AddCategoriesAsync()

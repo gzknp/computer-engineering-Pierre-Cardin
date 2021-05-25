@@ -24,38 +24,20 @@ namespace cengPC
 {
     public partial class App : Application
     {
-        /* static UyeDatabase database;
-        public static UyeDatabase UyeDatabase
-        {
-            get
-            {
-                if(database==null)
-                {
-                    database = new UyeDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "uyeler.db3"));
-                }
-                return database;
-            }
-        }*/
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
           //MainPage = new NavigationPage(new SettingsPage());
-
-          //      MainPage = new ProductView();
-
+          //MainPage = new ProductView();
         }
-
-        
         protected override void OnStart()
         {
         }
-
         protected override void OnSleep()
         {
         }
-
         protected override void OnResume()
         {
         }

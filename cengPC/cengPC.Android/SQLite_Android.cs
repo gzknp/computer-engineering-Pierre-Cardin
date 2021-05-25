@@ -25,7 +25,6 @@ namespace cengPC.Droid
             var path = Path.Combine(documentsPath, sqliteFileName);
             var cn = new SQLiteConnection(path);
             return cn;
-
         }
     }
 }

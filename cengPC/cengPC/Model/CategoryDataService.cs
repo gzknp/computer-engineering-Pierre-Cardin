@@ -14,7 +14,6 @@ namespace cengPC.Model
         {
             client = new FirebaseClient("https://pierrecapp-4a4be-default-rtdb.europe-west1.firebasedatabase.app/");
         }
-
         public async Task<List<Category>> GetCategoriesAsync()
         {
             var categories = (await client.Child("Categories")

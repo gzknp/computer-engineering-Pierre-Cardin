@@ -15,9 +15,6 @@ namespace cengPC.View
         public CartView()
         {
             InitializeComponent();
-            
         }
-
-
     }
 }

@@ -18,16 +18,12 @@
             <ImageButton Source="sifreDegistirme" Margin="12,0,0,0"/>
             <ImageButton Source="indirimKodlarim" Margin="12,0,0,0"/>
             <ImageButton Source="bildirimlerim" Margin="12,0,0,0"/>
-
             <ImageButton Source="cikisYap" Margin="15,-5,0,0" Clicked="ImageButton_Clicked_1"/>
-
-
             <StackLayout x:DataType="vm:NavPages" 
                         Margin=" 0,40,200,200" 
                          HeightRequest="100" 
                          Orientation="Horizontal" 
                          VerticalOptions="CenterAndExpand">
-
                 <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
                     <ImageButton Source="homepage.png" BackgroundColor="White"
                                  HorizontalOptions="Start" 
@@ -38,10 +34,8 @@
                     <Label Text="Ana Sayfa" 
                            Margin="10,-10,-10,0" 
                            Padding="-4">
-
                     </Label>
                 </StackLayout>
-
                 <StackLayout  Orientation="Vertical" Margin="15, 0, 0, 0">
                     <ImageButton Source="user.png" BackgroundColor="Red"
                                  HorizontalOptions="Start" 
@@ -49,16 +43,12 @@
                                  Margin="25,5,0,5"
                                  WidthRequest="30"
                                  Padding="-2"
-                              
                                  Command="{Binding NavProfileCommand}" />
                     <Label Text="Hesabım" 
                            Margin="15,-10,-10,0" 
                            Padding="-4">
-
                     </Label>
                 </StackLayout>
-
-
                 <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0">
                     <ImageButton Source="love.png" BackgroundColor="white"
                                  HorizontalOptions="Start" 
@@ -66,15 +56,13 @@
                                  Margin="25,5,0,5"
                                  WidthRequest="30"
                                  Padding="0" 
-                                  Command="{Binding NavFavoriteCommand}"/>
+                                 BindingContext="{Binding Source={vm:NavPages}}"
+                                 Command="{Binding NavFavoriteCommand}"/>
                     <Label Text="Favorilerim" 
                            Margin="4,-10,-10,0" 
                            Padding="-4">
-
                     </Label>
                 </StackLayout>
-
-
                 <StackLayout Orientation="Vertical" Margin="27, 0, 0, 0">
                     <ImageButton Source="tracking.png" BackgroundColor="white"
                                  HorizontalOptions="Start" 
@@ -82,16 +70,13 @@
                                  Margin="25,5,0,5"
                                  WidthRequest="30"
                                  Padding="-1" 
-                                  Command="{Binding NavTakipCommand}"/>
+                                 BindingContext="{Binding Source={vm:NavPages}}"
+                                 Command="{Binding NavTakipCommand}"/>
                     <Label Text="Sipariş Takip" 
                            Margin="-10,-10,-10,0"
                            Padding="-4">
-
                     </Label>
                 </StackLayout>
-
-
-
                 <StackLayout Orientation="Vertical" Margin="35, 0, 0, 0">
                     <ImageButton Source="more.png" BackgroundColor="white"
                                  HorizontalOptions="Start" 
@@ -102,7 +87,6 @@
                     <Label Text="Daha Fazla" 
                            Margin="-20,-10,-10,0" 
                            Padding="-4">
-
                     </Label>
                 </StackLayout>
             </StackLayout>

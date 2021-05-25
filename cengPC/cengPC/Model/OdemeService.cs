@@ -15,14 +15,12 @@ namespace cengPC.Model
         public OdemeService()
         {
             client = new FirebaseClient("https://pierrecapp-4a4be-default-rtdb.europe-west1.firebasedatabase.app/");
-
         }
         public async Task<bool> IsOdemeExists(int kartno)
         {
             var user = (await client.Child("Odemeler")
                 .OnceAsync<Odeme>()).Where(u => u.Object.KartNo == kartno).FirstOrDefault();
             return (user != null);
-
         }
         public async Task<bool> RegisterOdeme(int kartno, string adres, int ccv)
         {
@@ -30,7 +28,6 @@ namespace cengPC.Model
             {
                 await client.Child("Odemeler").PostAsync(new Odeme()
                 {
-
                     Ccv = ccv,
                     Adres = adres,
                     KartNo = kartno

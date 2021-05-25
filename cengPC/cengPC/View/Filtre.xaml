@@ -4,18 +4,15 @@
              xmlns:vm="clr-namespace:cengPC.ViewModels"
              x:Class="cengPC.View.Filtre">
     <ContentPage.Content>
-
         <StackLayout>
         <StackLayout>
                 <Label Text="Renk" 
                        HorizontalOptions="Center"
                        FontSize="25"
-                   VerticalOptions="Center"/>
-                <Picker  
-                    VerticalOptions="Center"
-                    HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center"/>
+                <Picker VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
                         SelectedIndexChanged="OnPickerSelectedIndexChanged">
-
                     <Picker.Items>
                         <x:String>Hepsi</x:String>
                         <x:String>Koyu Renk</x:String>
@@ -27,11 +24,9 @@
                 <Label Text="Fiyat" 
                        HorizontalOptions="Center"
                        FontSize="25"
-                   VerticalOptions="Center"/>
-                <Picker 
-                        VerticalOptions="Center"
-                        HorizontalOptions="FillAndExpand"
-                     ></Picker>
+                       VerticalOptions="Center"/>
+                <Picker VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"></Picker>
             </StackLayout>
             <Button Text="Filtrele" />
         </StackLayout>

@@ -2,28 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:helper="clr-namespace:cengPC.Helper"
-             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:viewmodels="clr-namespace:cengPC.ViewModels" x:DataType="viewmodels:ProductDetailsViewModel"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:viewmodels="clr-namespace:cengPC.ViewModels" 
+             x:DataType="viewmodels:ProductDetailsViewModel"
              x:Class="cengPC.View.ProductDetailsView"
              xmlns:vm="clr-namespace:cengPC.ViewModels"
              xmlns:m="clr-namespace:cengPC.Model"
              xmlns:v="clr-namespace:cengPC.View">
     <NavigationPage.TitleView>
-        <StackLayout x:DataType="vm:ProductsViewModel"  HeightRequest="50" Orientation="Horizontal"  BackgroundColor="white">
-
-
-            <ImageButton Source="searchicon.png" BackgroundColor="white"
-                                HorizontalOptions="End" 
-                                VerticalOptions="Center"
-                                Margin="265, 15, 0 ,13" 
-                                CornerRadius="100" 
-                                Padding="0" Clicked="ImageButton_Clicked"/>
-            <ImageButton  Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"
-                                 Source="basket.png" Margin="0,0,-10,0" HorizontalOptions="End"
+        <StackLayout x:DataType="vm:ProductsViewModel"  HeightRequest="50" Orientation="Horizontal"  
+                     BackgroundColor="white">
+            <ImageButton Source="searchicon.png" 
+                         BackgroundColor="white"
+                         HorizontalOptions="End" 
+                         VerticalOptions="Center"
+                         Margin="265, 15, 0 ,13" 
+                         CornerRadius="100" 
+                         Padding="0" 
+                         Clicked="ImageButton_Clicked"/>
+            <ImageButton Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"
+                         Source="basket.png" 
+                         Margin="0,0,-10,0" 
+                         HorizontalOptions="End"
+                         BindingContext="{Binding Source={vm:ProductsViewModel}}"
                          Command="{Binding ViewCartCommand}"/>
-            <Label 
-                Text="{Binding UserCartItemsCount}" FontSize="Subtitle"
-                           Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"
-                           HorizontalTextAlignment="End" VerticalTextAlignment="Start"/>
+            <Label BindingContext="{Binding Source={vm:ProductsViewModel}}" Text="{Binding UserCartItemsCount}" FontSize="Subtitle"
+                   Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"
+                   HorizontalTextAlignment="End" 
+                   VerticalTextAlignment="Start"/>
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
@@ -38,29 +44,39 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" Source="{Binding SelectedProductItem.ImageUrl}"
-                  Aspect="AspectFit"  VerticalOptions="Start"/>
-
-            <StackLayout Grid.Row="2" Spacing="10" Padding="10"
+            <Image Grid.Row="0" 
+                   Source="{Binding SelectedProductItem.ImageUrl}"
+                   Aspect="AspectFit"  
+                   VerticalOptions="Start"/>
+            <StackLayout Grid.Row="2" 
+                         Spacing="10" 
+                         Padding="10"
                          VerticalOptions="Start">
                 <StackLayout Orientation="Horizontal" Spacing="10">
-                    <Label FontAttributes="Bold" Text="Ürün ID:" FontSize="Subtitle"/>
+                    <Label FontAttributes="Bold" 
+                           Text="Ürün ID:" 
+                           FontSize="Subtitle"/>
                     <Label Text="{Binding SelectedProductItem.ProductID}"
-                           FontSize="Subtitle" TextColor="Black"/>
+                           FontSize="Subtitle" 
+                           TextColor="Black"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="10">
-                    <Label FontAttributes="Bold" Text="Ürün Adı:" FontSize="Subtitle"/>
+                    <Label FontAttributes="Bold" 
+                           Text="Ürün Adı:" 
+                           FontSize="Subtitle"/>
                     <Label Text="{Binding SelectedProductItem.Name}"
-                           FontSize="Subtitle" TextColor="Black"/>
+                           FontSize="Subtitle" 
+                           TextColor="Black"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="10">
-                    <Label FontAttributes="Bold" Text="İçerik:" FontSize="Subtitle"/>
+                    <Label FontAttributes="Bold" 
+                           Text="İçerik:" 
+                           FontSize="Subtitle"/>
                     <Label Text="{Binding SelectedProductItem.Description}"
-                           FontSize="Subtitle" TextColor="Black"/>
+                           FontSize="Subtitle" 
+                           TextColor="Black"/>
                 </StackLayout>
-
             </StackLayout>
-
             <Grid Grid.Row="2" HorizontalOptions="Center">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -73,40 +89,27 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
-                <Button Text="-" FontSize="30" TextColor="White" Grid.Column="0"
+                <Button Text="-" FontSize="30" 
+                        TextColor="White" Grid.Column="0"
                         BackgroundColor="Black" Grid.Row="3"
                         HorizontalOptions="End"  WidthRequest="40"
                         Command="{Binding DecrementOrderCommand}"/>
                 <Entry Text="{Binding TotalQuantity}" Grid.Row="3"
                        HorizontalTextAlignment="Center" FontSize="30"
                        Grid.Column="1"/>
-                <Button Text="+" FontSize="30" TextColor="White"
-                        BackgroundColor="Black" 
-                         Grid.Row="3" Grid.Column="2" HorizontalOptions="End"
+                <Button Text="+" FontSize="30" 
+                        TextColor="White" BackgroundColor="Black" 
+                        Grid.Row="3" Grid.Column="2" HorizontalOptions="End"
                         WidthRequest="40" 
                         Command="{Binding IncrementOrderCommand}"/>
             </Grid>
             <StackLayout Orientation="Horizontal" Grid.Row="3">
-
-
-  
-
-
-                                <Button Text="Sepete Ekle" 
-                            WidthRequest="413" HorizontalOptions="Center"
-                                        BackgroundColor="Brown"
-                                        TextColor="White"
-                            Command="{Binding AddToCartCommand}" Margin="0,0,70,10"
-                            HeightRequest="50"/>
-
-
-
-
-
+                <Button Text="Sepete Ekle" 
+                        WidthRequest="413" HorizontalOptions="Center"
+                        BackgroundColor="Brown" TextColor="White"
+                        Command="{Binding AddToCartCommand}" Margin="0,0,70,10"
+                        HeightRequest="50"/>
             </StackLayout>
-
-
         </Grid>
         </ScrollView>
     </ContentPage.Content>

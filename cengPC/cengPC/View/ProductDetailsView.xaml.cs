@@ -25,7 +25,6 @@ namespace cengPC.View
         async void ImageButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SearchPage());
-
         }
     }
 }

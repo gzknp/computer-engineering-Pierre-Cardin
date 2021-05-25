@@ -13,7 +13,5 @@ namespace cengPC.Model
         public decimal Price { get; set; }
         public int CategoryID { get; set; }
         public string Color { get; set; }
-
-
     }
 }

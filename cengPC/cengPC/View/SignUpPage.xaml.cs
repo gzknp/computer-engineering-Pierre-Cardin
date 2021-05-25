@@ -16,15 +16,11 @@ namespace cengPC
         public SignUpPage()
         {
             InitializeComponent();
-            
         }
         protected override  void OnAppearing()
         {
             base.OnAppearing();
         }
-
-
-
         async void Button_Clicked(object sender, EventArgs e)
         {
           await  Navigation.PopAsync();

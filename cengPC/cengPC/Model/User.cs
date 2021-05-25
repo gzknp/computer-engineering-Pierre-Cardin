@@ -11,6 +11,5 @@ namespace cengPC
         public string Email { get; set; }
         public string TelNo { get; set; }
         public string Password { get; set; }
-
     }
 }

@@ -21,7 +21,6 @@ namespace cengPC.View
             NavigationPage.SetHasNavigationBar(this, true);
             cvm = new CategoryViewModel(category);
             this.BindingContext = cvm;
-
         }
         async void CollectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
@@ -34,9 +33,7 @@ namespace cengPC.View
         async void ImageButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SearchPage());
-
         }
-
         async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Filtre());

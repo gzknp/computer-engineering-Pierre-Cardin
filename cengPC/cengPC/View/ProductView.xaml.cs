@@ -22,10 +22,8 @@ namespace cengPC.View
             var category = e.CurrentSelection.FirstOrDefault() as Category;
             if (category == null)
                 return;
-            
             await Navigation.PushAsync(new CategoryView(category),true);
             ((CollectionView)sender).SelectedItem = null;
-
         }
     }
 }

@@ -241,7 +241,6 @@ namespace cengPC.Helper
                         ImageUrl=item.ImageUrl,
                         Name=item.Name,
                         Price=item.Price,
-                        
                     });
                 }
             }

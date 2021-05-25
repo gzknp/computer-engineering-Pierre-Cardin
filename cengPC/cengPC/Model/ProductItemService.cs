@@ -14,7 +14,6 @@ namespace cengPC.Model
         public ProductItemService()
         {
             client = new FirebaseClient("https://pierrecapp-4a4be-default-rtdb.europe-west1.firebasedatabase.app/");
-
         }
         public async Task<List<ProductItem>> GetProductItemAsync()
         {
@@ -42,12 +41,6 @@ namespace cengPC.Model
             }
             return productItemsByCategory;
         }
-      //  public async Task<ObservableCollection<ProductItem>> GetProductItemsByFilter(string renk)
-        //{
-         //   var productItemsByFilter = new ObservableCollection<ProductItem>();
-       //     var items=(await GetProductItemAsync()).Where(p=>p.)
-        //}
-        
-
+    
     }
 }

@@ -15,7 +15,6 @@ namespace cengPC
         public SearchPage()
         {
             InitializeComponent();
-
         }
     }
 }

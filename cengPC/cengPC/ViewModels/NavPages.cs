@@ -55,8 +55,8 @@ namespace cengPC.ViewModels
                 {
                 await Application.Current.MainPage.Navigation.PushAsync(new AccountPage());
 
-            }
-            else
+                }
+                else
                 await Application.Current.MainPage.Navigation.PushAsync(new LogInPage());
 
 

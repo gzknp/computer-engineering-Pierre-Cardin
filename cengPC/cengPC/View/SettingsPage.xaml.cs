@@ -30,9 +30,9 @@ namespace cengPC.View
         {
             var cct = new CreateCartTable();
             if (cct.CreateTable())
-                DisplayAlert("Başarılı", "Cart Table olusturuldu", "Ok");
+                DisplayAlert("Başarılı", "Cart Table olusturuldu", "TAMAM");
             else
-                DisplayAlert("Hata", "Tablo olusurken hata", "OK");
+                DisplayAlert("Hata", "Tablo olusurken hata", "TAMAM");
         }
     }
 }
