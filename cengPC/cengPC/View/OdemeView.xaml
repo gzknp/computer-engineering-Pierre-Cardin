@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                          xmlns:vm="clr-namespace:cengPC.ViewModels"
+             x:Class="cengPC.View.OdemeView" BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <vm:OdemeViewModel/>
+    </ContentPage.BindingContext>
+    <NavigationPage.TitleView >
+
+        <Label BackgroundColor="White" TextColor="Black" Text="ÖDEME BİLGİLERİ" 
+              FontSize="20" ></Label>
+
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+            <Label Text="Kart Numarası" FontAttributes="Bold" FontSize="26"/>
+            <Entry Text="{Binding KartNo}" 
+               Placeholder="0000-0000-0000-0000"/>
+            <Label Text="Adres" FontAttributes="Bold" FontSize="26"/>
+            <Editor Text="{Binding Adres}" VerticalOptions="Center" Keyboard="Chat"/>
+
+            <Label Text="Cvc No." FontAttributes="Bold" FontSize="26"/>
+            <Entry Text="{Binding Ccv}"
+               Placeholder="000"/>
+
+
+            
+            <Button Text="BİLGİLERİ KAYDET" BackgroundColor="Brown" TextColor="White"  Command="{Binding RegisterOdemeCommand}"></Button>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -15,12 +15,11 @@ namespace cengPC
         public FavPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasBackButton(this, false);
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PopAsync();
+             Application.Current.MainPage.Navigation.PushAsync(new MainPage());
         }
     }
 }

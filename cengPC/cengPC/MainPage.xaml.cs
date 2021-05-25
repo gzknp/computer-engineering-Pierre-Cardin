@@ -6,6 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using cengPC;
+using cengPC.ViewModels;
+using cengPC.View;
+using cengPC.Model;
+
 
 namespace cengPC
 {
@@ -16,7 +20,7 @@ namespace cengPC
         
         public MainPage()
         {
-            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasBackButton(this, false);
             InitializeComponent();
         }
         async void ImageButton_Clicked(object sender, EventArgs e)
@@ -25,56 +29,24 @@ namespace cengPC
             
         }
 
-        async void ImageButton_Clicked_1(object sender, EventArgs e)//private void ti. 21.39da async'e değiştirdim
-        {
-            await Navigation.PushAsync(new basketPage());
-        }
 
-        private void ImageButton_Clicked_2(object sender, EventArgs e)
-        {
-            if (MainPage.girildiMi) 
-            {
-                Navigation.PushAsync(new AccountPage());
-                
-            }
-            else
-            {
-                Navigation.PushAsync(new LogInPage());
-            }
-
-        }
 
         private void ImageButton_Clicked_3(object sender, EventArgs e)
         {
 
         }
 
-        private void ImageButton_Clicked_4(object sender, EventArgs e)
+         async void CollectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
-            if (MainPage.girildiMi)
-            {
-                Navigation.PushAsync(new TakipPage());
+            var category = e.CurrentSelection.FirstOrDefault() as Category;
+            if (category == null)
+                return;
 
-            }
-            else
-            {
-                Navigation.PushAsync(new NoLogTakipPage());
-            }
-        }
-        
-        private void ImageButton_Clicked_5(object sender, EventArgs e)
-        {
-            if (MainPage.girildiMi)
-            {
-                Navigation.PushAsync(new FavPage());
-
-            }
-            else
-            {
-                Navigation.PushAsync(new LogInPage());
-            }
+            await Navigation.PushAsync(new CategoryView(category));
+            ((CollectionView)sender).SelectedItem = null;
 
         }
+
 
         private void ImageButton_Clicked_6(object sender, EventArgs e)
         {
@@ -85,12 +57,11 @@ namespace cengPC
         //erkek sayfasi koleksiyon butonu clicked işlemi
         private void erkekKoleksiyon(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new erkekKoleksiyonPage());
+            Navigation.PushAsync(new ProductView());
         }
 
         private void ImageButton_Clicked_7(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new erkekKoleksiyonPage());
         }
     }
 }

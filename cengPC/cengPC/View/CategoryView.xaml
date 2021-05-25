@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helper="clr-namespace:cengPC.Helper"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:models="clr-namespace:cengPC.Model" 
+             xmlns:vm="clr-namespace:cengPC.ViewModels"
+             xmlns:m="clr-namespace:cengPC.Model"
+             x:Class="cengPC.View.CategoryView">
+
+    <NavigationPage.TitleView>
+        <StackLayout x:DataType="vm:ProductsViewModel" HeightRequest="50" Orientation="Horizontal"  BackgroundColor="white">
+
+
+            <ImageButton Source="searchicon.png" BackgroundColor="White"
+                                HorizontalOptions="Start" 
+                                VerticalOptions="Center"
+                                Margin="265, 15, 0 ,13" 
+                                 Clicked="ImageButton_Clicked"/>
+            <ImageButton BackgroundColor="White" x:DataType="vm:ProductsViewModel" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1"
+                                 Source="basket.png" Margin="0,0,-10,0" HorizontalOptions="Start"
+                         BindingContext="{Binding Source={vm:ProductsViewModel}}"
+                         Command="{Binding ViewCartCommand}"/>
+            <Label  x:DataType="vm:ProductsViewModel" 
+                    BindingContext="{Binding Source={vm:ProductsViewModel}}"
+                    Text="{Binding UserCartItemsCount}" FontSize="Subtitle"
+                   />
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <pancake:PancakeView Grid.Row="2" CornerRadius="30" BackgroundColor="White" Margin="0,-40">
+                <Grid Padding="25,30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label x:DataType="vm:CategoryViewModel" Grid.Row="0" Grid.Column="0" Text="{Binding TotalProductItems,
+                        StringFormat='                       {0} Ürün Gösteriliyor'}" FontAttributes="Bold" FontSize="18"/>
+                    <Button Margin="-150,30,0,0" BackgroundColor="White" Text="Sırala"/>
+                    <Button Margin="150,30,0,0" BackgroundColor="White" Text="Filtre" Clicked="Button_Clicked"/>
+                    <CollectionView x:DataType="vm:CategoryViewModel" ItemsSource="{Binding ProductItemsByCategory}"
+                                    ItemsLayout="VerticalGrid,2"
+                                    VerticalOptions="Start"
+                                    VerticalScrollBarVisibility="Never"
+                                    Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                    SelectionMode="Single"
+                                    SelectionChanged="CollectionView_SelectionChanged">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                              <StackLayout>
+                                    <Frame HasShadow="False" BackgroundColor="White" HeightRequest="230"
+                                           CornerRadius="0" Margin="0,10,-10,10">
+                                        <StackLayout              x:DataType="m:ProductItem">
+                                    <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+
+                                              <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="7" Grid.ColumnSpan="2" Source="{Binding ImageUrl}" HeightRequest="190"
+                                                       WidthRequest="55" Aspect="AspectFit"/>
+                                            <Label Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"
+                                                   Text="{Binding Name}" FontSize="15" FontAttributes="Bold"/>
+                                            <Label Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"
+                                                   Text="{Binding Price}" FontSize="15"
+                                                   TextColor="Red"/>
+                                        </Grid> 
+                                                                        </StackLayout>
+
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                        
+                    </CollectionView>
+
+                </Grid>
+            </pancake:PancakeView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

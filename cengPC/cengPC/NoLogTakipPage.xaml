@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView >
 
-        <Label  TextColor="Black" Text="Üyeliksiz Sipariş Takibi" 
+        <Label  TextColor="Black" Text="Sipariş Takibi" 
               FontSize="20" HorizontalTextAlignment="Start"></Label>
 
     </NavigationPage.TitleView>

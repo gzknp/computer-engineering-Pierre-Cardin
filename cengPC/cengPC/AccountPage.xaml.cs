@@ -22,10 +22,16 @@ namespace cengPC
             Navigation.PushAsync(new ProfilPage());
         }
 
-        private void ImageButton_Clicked_1(object sender, EventArgs e)
+        private async void ImageButton_Clicked_1(object sender, EventArgs e)
         {
-            MainPage.girildiMi = false;
-            Navigation.PopAsync();
+         await Application.Current.MainPage.Navigation.PushModalAsync(new LogInPage());
+
+
+        }
+
+        private async void ImageButton_Clicked_2(object sender, EventArgs e)
+        {
+          await Application.Current.MainPage.Navigation.PushModalAsync(new MainPage());
 
         }
     }

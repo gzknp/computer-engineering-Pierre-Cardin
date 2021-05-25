@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helper="clr-namespace:cengPC.Helper"
+             xmlns:vm="clr-namespace:cengPC.ViewModels"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="cengPC.View.ProductView">
+    <ContentPage.BindingContext>
+        <vm:ProductsViewModel/>
+    </ContentPage.BindingContext>
+    <NavigationPage.TitleView>
+        <StackLayout HeightRequest="50" Orientation="Horizontal"  BackgroundColor="white">
+            <Label Text="{Binding UserCartItemsCount}" FontSize="Subtitle"
+                           Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"
+                           HorizontalTextAlignment="End" VerticalTextAlignment="Start"/>
+            <ImageButton Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"
+                                 Source="basket.png" Margin="0,0,10,0" HorizontalOptions="End"
+                                 
+                         Command="{Binding ViewCartCommand}"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="20,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                  
+                  
+
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <SearchBar Grid.Column="0" Placeholder="Arama"
+                               BackgroundColor="Transparent" HorizontalOptions="Fill"/>
+                </Grid>
+             
+                <CollectionView ItemsSource="{Binding Categories}"
+                                    Margin="0,20"
+                                    HeightRequest="125" VerticalOptions="FillAndExpand"
+                                   HorizontalScrollBarVisibility="Never"
+                                    ItemsLayout="HorizontalList"
+                                    SelectionMode="Single"
+                                SelectionChanged="CollectionView_SelectionChanged"
+                                    Grid.Row="2">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="0,0,15,0">
+
+                                    <Label Text="{Binding CategoryName}" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                 
+                    </CollectionView>
+
+
+                   
+       </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

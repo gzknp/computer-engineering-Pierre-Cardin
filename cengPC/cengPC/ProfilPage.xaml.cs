@@ -20,7 +20,6 @@ namespace cengPC
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            UyeListView.ItemsSource = await App.Database.GetUyelerAsync();
 
         }
 

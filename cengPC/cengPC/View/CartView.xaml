@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:helper="clr-namespace:cengPC.Helper"
+             x:Class="cengPC.View.CartView"
+             xmlns:vm="clr-namespace:cengPC.ViewModels"
+             xmlns:m="clr-namespace:cengPC.Model"
+             Visual="Material"
+             BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <vm:CartViewModel/>
+    </ContentPage.BindingContext>
+    <NavigationPage.TitleView >
+        <Label Text="Sepetim" HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" FontSize="20"
+                   Margin="-65,0,0,0"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+             </Grid.RowDefinitions>
+
+
+            <pancake:PancakeView Grid.Row="2" BackgroundColor="White"
+                                 CornerRadius="30" Margin="0,-40">
+                <Grid Padding="25,30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <CollectionView x:DataType="vm:CartViewModel" ItemsSource="{Binding CartItems}"
+                                    ItemsLayout="VerticalGrid,1"
+                                    VerticalOptions="Start"
+                                    VerticalScrollBarVisibility="Never"
+                                    Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                    SelectionMode="Single"
+                                    >
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Frame HasShadow="False" BackgroundColor="White" HeightRequest="230"
+                                           CornerRadius="0" Margin="0,10,-10,10">
+                                        <StackLayout              >
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="2*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Image   x:DataType="m:UserCartItem" Source="{Binding ImageUrl}" Grid.Column="0"  HeightRequest="200" Grid.RowSpan="6" Margin="-20,-20,10,-90"
+                                                       WidthRequest="15" Aspect="Fill"/>
+                                                <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
+                                                    x:DataType="m:UserCartItem" Text="{Binding ProductName } " FontSize="15" FontAttributes="Bold"/>
+                                                <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1"
+                                                   x:DataType="m:UserCartItem" Text="{Binding Cost, StringFormat='{0} TL'}" FontSize="15"
+                                                   TextColor="Red"/>
+                                                <Label  x:DataType="m:UserCartItem" Text="{Binding Quantity,StringFormat='Adet: {0}'}" Grid.Row="4"  Grid.Column="1" FontSize="Body"
+                                       TextColor="Black"/>
+
+                                            </Grid>
+                                        </StackLayout>
+
+
+                                    </Frame>                    
+
+                                </StackLayout>
+                            </DataTemplate>              
+                        </CollectionView.ItemTemplate>
+                        <CollectionView.Footer>                    
+                            <StackLayout Orientation="Vertical" Grid.Row="4" Grid.RowSpan="1" VerticalOptions="Center">                      
+          <Label Text="{Binding TotalCost, StringFormat='Ödenecek Tutar :          {0} TL'}"
+                    HorizontalTextAlignment="Center" FontSize="Title" Grid.Row="2" Margin="0,0,0,30"
+                   TextColor="Black"/>
+                                <Button Text="ÖDEME BİLGİLERİ" TextColor="White" Grid.Row="2"
+                            Margin="0,-10,250,70" Padding="20,-20,20,-20" BackgroundColor="DarkBlue"
+                    Command="{Binding GoToOdeme}" 
+                    HorizontalOptions="CenterAndExpand"/>
+                    <Button Text="ALIŞVERİŞİ TAMAMLA" TextColor="White" Grid.Row="2"
+                            Margin="100,-124,-140,30" Padding="50,-15,180,-15" BackgroundColor="Brown"
+                    Command="{Binding PlaceOrdersCommand}" 
+                    HorizontalOptions="CenterAndExpand" />
+                    </StackLayout></CollectionView.Footer>
+                    </CollectionView>
+
+
+                </Grid>
+            </pancake:PancakeView>                   
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+
+
+

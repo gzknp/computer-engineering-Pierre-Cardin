@@ -2,6 +2,9 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.IO;
+using cengPC.View;
+using Xamarin.Essentials;
+
 [assembly: ExportFont("Blinker-Black.ttf", Alias = "BlBl")]
 [assembly: ExportFont("Blinker-Bold.ttf", Alias = "BlBo")]
 [assembly: ExportFont("Blinker-ExtraBold.ttf", Alias = "BlEx")]
@@ -33,26 +36,18 @@ namespace cengPC
                 return database;
             }
         }*/
-        static UyeDatabase database;
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+          //MainPage = new NavigationPage(new SettingsPage());
+
+          //      MainPage = new ProductView();
+
         }
 
-        public static UyeDatabase Database
-        {
-            get
-            {
-                if(database == null)
-                {
-                    //database = new UyeDatabase(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("uyelerim.db3"));
-                    database = new UyeDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "uyelerim.db3"));
-                }
-                return database;
-            }
-        }
+        
         protected override void OnStart()
         {
         }

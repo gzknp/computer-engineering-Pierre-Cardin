@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:cengPC"
+             x:Class="cengPC.LogInPage" >
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
+
+    <NavigationPage.TitleView>
+        <Label  TextColor="Black" Text="GİRİŞ YAP" 
+              FontSize="20" ></Label>
+
+    </NavigationPage.TitleView>
+    <ContentPage.Content>  
+        <ScrollView>
+
+        <Grid>
+        <StackLayout>
+                <Frame BorderColor="Gray" Margin="10">
+                    <Label  Text=" Yeni Üyelerimize Özel 250 TL'de 40 TL indirim  &#10; Kupon Kodu YENIUYELIK">
+                        
+                    </Label>
+                </Frame>
+                <Frame HasShadow="False" BorderColor="White">
+                    <Button BackgroundColor="DarkBlue" Text="FACEBOOK İLE GİRİŞ YAP"
+                            TextColor="White"></Button>
+                </Frame>
+                    <Entry x:Name="EntryEmail" Placeholder="E-posta" Margin="10,10,10,0" Text="{Binding Email}"></Entry>
+                    <Entry IsPassword="True" x:Name="EntrySifre" Placeholder="Şifre" Text="{Binding Password}" Margin="10,10,10,0"></Entry>
+                    <Button BackgroundColor="Brown" Text="GİRİŞ YAP" TextColor="White"
+                            Margin="10,30,10,0" 
+                            Command="{Binding LoginCommand}"></Button>
+                    <Button Margin="10,10,10,0" Text="Şifrenizi mi unuttunuz?" BackgroundColor="White"></Button>
+                    <Label HorizontalTextAlignment="Center" Text="   HESABIM YOK  " FontAttributes="Bold" TextColor="Black" 
+                           Margin="10,10,10,0"></Label>
+                    <Label Margin="10,0,10,0" HorizontalTextAlignment="Center" Text="       Sipariş takibi, kolay iade ve daha fazlası için bir hesap &#10;   oluşturun."></Label>
+                    <Button Text="KAYIT OL" BackgroundColor="White"
+                                                    BorderColor="Brown" TextColor="Brown" BorderWidth="1"
+                                                    Margin="10,10,10,0"
+                            Clicked="Button_Clicked">
+
+                    </Button>
+
+                </StackLayout>
+        </Grid>  
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

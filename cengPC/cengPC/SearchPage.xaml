@@ -5,7 +5,7 @@
             <NavigationPage.TitleView >
         
         <Label BackgroundColor="White" TextColor="Black" Text="Arama" 
-              FontSize="20" HorizontalTextAlignment="Center"></Label>
+              FontSize="20" HorizontalTextAlignment="Start"></Label>
 
     </NavigationPage.TitleView>
 
