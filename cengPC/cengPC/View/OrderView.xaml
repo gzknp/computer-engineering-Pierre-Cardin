@@ -33,8 +33,10 @@
                            FontSize="21"/>
                     <Label x:Name="LabelOrderID" 
                            TextColor="Black"
-                           FontSize="Subtitle"/>
-                    <Button Text="Tüm Siparişleri Görüntüle"
+                           FontSize="Subtitle"
+                           Margin="0"/>
+                    <Button Text="Anasayfaya Dön"
+                            Margin="10"
                             WidthRequest="200"
                             BackgroundColor="Brown"
                             HorizontalOptions="CenterAndExpand"

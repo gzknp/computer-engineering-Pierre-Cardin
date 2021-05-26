@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using cengPC.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,11 +22,11 @@ namespace cengPC
         }
         private async void ImageButton_Clicked_1(object sender, EventArgs e)
         {
-         await Application.Current.MainPage.Navigation.PushModalAsync(new LogInPage());
+         await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
         }
         private async void ImageButton_Clicked_2(object sender, EventArgs e)
         {
-          await Application.Current.MainPage.Navigation.PushModalAsync(new MainPage());
+          await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
 
         }
     }

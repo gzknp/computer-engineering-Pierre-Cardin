@@ -41,6 +41,5 @@ namespace cengPC.Model
             }
             return productItemsByCategory;
         }
-    
     }
 }

@@ -9,6 +9,7 @@ using Moq;
 using Autofac.Extras.Moq;
 using FluentAssertions;
 using System.Threading.Tasks;
+using System;
 
 namespace UnitTest
 {
@@ -23,8 +24,8 @@ namespace UnitTest
         {
             using(var mock=AutoMock.GetLoose())
             {
-                var viewModel = mock.Create<CategoryViewModel>();
-                viewModel.SelectedCategory.Should().NotBeNull();
+                var categoryViewModel = mock.Create<CategoryViewModel>();
+                categoryViewModel.SelectedCategory.Should().NotBeNull();
             }
         }
         [Test]
@@ -32,8 +33,36 @@ namespace UnitTest
         {
             using (var mock=AutoMock.GetLoose())
             {
-                var viewModel = mock.Create<LoginViewModel>();
-                viewModel.LoginCommand.Should().NotBeNull();
+                var loginViewModel = mock.Create<LoginViewModel>();
+                loginViewModel.LoginCommand.Should().NotBeNull();
+            }
+        }
+        [Test]
+        public void RegisterIsBusy()
+        {
+            using (var mock= AutoMock.GetLoose())
+            {
+                var registerViewModel = mock.Create<RegisterViewModel>();
+                registerViewModel.IsBusy.Should().BeFalse();
+            }
+        }
+        [Test]
+        public void CcvBeGreaterOrEqual()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                var odemeViewModel = mock.Create<OdemeViewModel>();
+                odemeViewModel.Ccv.Should().BeGreaterOrEqualTo(0);
+            }
+        }
+        [Test]
+        public void RegisterOdemeCommandCanExecute()
+        {
+            using (var mock=AutoMock.GetLoose())
+            {
+                var odemeViewModel = mock.Create<OdemeViewModel>();
+                odemeViewModel.RegisterOdemeCommand.ChangeCanExecute();
+
             }
         }
         [Test]
@@ -41,9 +70,9 @@ namespace UnitTest
         {
             using (var mock=AutoMock.GetLoose())
             {
-                var viewModel = mock.Create<ProductDetailsViewModel>();
+                var productDetailsViewModel = mock.Create<ProductDetailsViewModel>();
 
-                viewModel.SelectedProductItem.Should().NotBeNull();
+                productDetailsViewModel.SelectedProductItem.Should().NotBeNull();
 
             }
         }
@@ -52,17 +81,17 @@ namespace UnitTest
         {
             using (var mock=AutoMock.GetLoose())
             {
-                var category = mock.Create<CategoryViewModel>();
-                category.TotalProductItems.Should().Equals(0);
+                var categoryViewModel = mock.Create<CategoryViewModel>();
+                categoryViewModel.TotalProductItems.Should().Equals(0);
             }
         }
         [Test]
-        public async Task ProductItemsByCategoryEqualsToPIBC()
+        public async Task ProductItemsByCategoryEqualsToSelectedCategory()
         {
             using (var mock=AutoMock.GetLoose())
             {
-                var viewModel = mock.Create<CategoryViewModel>();
-                viewModel.ProductItemsByCategory.Equals(viewModel.ProductItemsByCategory);
+                var categoryViewModel = mock.Create<CategoryViewModel>();
+                categoryViewModel.ProductItemsByCategory.Equals(categoryViewModel.SelectedCategory);
             }
         }
        

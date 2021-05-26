@@ -121,7 +121,11 @@ namespace cengPC.ViewModels
                 var userService = new UserService();
                 Result = await userService.RegisterUser(Email, Password, TelNo, Name, LastName);
                 if (Result)
+                {
                     await Application.Current.MainPage.DisplayAlert("Tebrikler", "Kayıt Başarılı", "TAMAM");
+                    await Application.Current.MainPage.Navigation.PopAsync();
+
+                }
                 else
                     await Application.Current.MainPage.DisplayAlert("Hata",
                         "Aynı mail bir kullanıcı tarafından kullanılıyor", "TAMAM");

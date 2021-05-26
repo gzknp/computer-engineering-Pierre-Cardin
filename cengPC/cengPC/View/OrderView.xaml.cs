@@ -14,13 +14,14 @@ namespace cengPC.View
     {
         public OrderView(string id)
         {
+            NavigationPage.SetHasBackButton(this, false);
             InitializeComponent();
             LabelName.Text = "Welcome" + Preferences.Get("Username", "Guest") + ",";
             LabelOrderID.Text = id;
         }
         async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new TakipPage());
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

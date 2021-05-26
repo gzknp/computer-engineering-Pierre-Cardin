@@ -21,7 +21,7 @@ namespace cengPC.Model
             var cn = DependencyService.Get<ISQLite>().GetConnection();
             var data = cn.Table<CartItem>().ToList();
             var orderId = Guid.NewGuid().ToString();
-            var uname = Preferences.Get("Username", "Guest");
+            var uname = Preferences.Get("Username", "Kullanici");
             decimal totalCost = 0;
             foreach(var item in data)
             {

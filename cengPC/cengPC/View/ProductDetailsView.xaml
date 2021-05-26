@@ -24,9 +24,10 @@
                          Source="basket.png" 
                          Margin="0,0,-10,0" 
                          HorizontalOptions="End"
-                         BindingContext="{Binding Source={vm:ProductsViewModel}}"
+                         BindingContext="{Binding Source={vm:ProductsViewModel}}"                         
                          Command="{Binding ViewCartCommand}"/>
-            <Label BindingContext="{Binding Source={vm:ProductsViewModel}}" Text="{Binding UserCartItemsCount}" FontSize="Subtitle"
+            <Label  Text="{Binding UserCartItemsCount}" FontSize="Subtitle"
+                    BindingContext="{Binding Source={vm:ProductsViewModel}}"   
                    Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"
                    HorizontalTextAlignment="End" 
                    VerticalTextAlignment="Start"/>
@@ -76,7 +77,15 @@
                            FontSize="Subtitle" 
                            TextColor="Black"/>
                 </StackLayout>
-            </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Label FontAttributes="Bold" 
+                           Text="Fiyat:" 
+                           FontSize="Subtitle"/>
+                        <Label Text="{Binding SelectedProductItem.Price,StringFormat='{0} TL'}" 
+                           FontSize="Subtitle" 
+                           TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
             <Grid Grid.Row="2" HorizontalOptions="Center">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
